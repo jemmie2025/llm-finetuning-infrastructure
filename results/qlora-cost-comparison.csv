@@ -1,0 +1,31 @@
+provider,tier,gpu,vram_gib,usd_per_hour,assumed_tokens_per_second,checked_date,source,dataset_tokens,epochs,overhead,estimated_hours,estimated_cost_usd,evidence_type
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.0,7.9365,3.9683,modeled
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.15,9.127,4.5635,modeled
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.3,10.3175,5.1587,modeled
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.0,23.8095,11.9048,modeled
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.15,27.381,13.6905,modeled
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.3,30.9524,15.4762,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.0,4.6296,4.1204,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.15,5.3241,4.7384,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.3,6.0185,5.3565,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.0,13.8889,12.3611,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.15,15.9722,14.2153,modeled
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.3,18.0556,16.0694,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.0,3.9683,4.3254,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.15,4.5635,4.9742,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.3,5.1587,5.623,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.0,11.9048,12.9762,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.15,13.6905,14.9226,modeled
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.3,15.4762,16.869,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.0,2.3148,6.6898,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.15,2.662,7.6933,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,1,0.3,3.0093,8.6968,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.0,6.9444,20.0694,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.15,7.9861,23.0799,modeled
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing,10000000,3,0.3,9.0278,26.0903,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,1,0.0,11.1111,14.3333,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,1,0.15,12.7778,16.4833,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,1,0.3,14.4444,18.6333,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,3,0.0,33.3333,43.0,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,3,0.15,38.3333,49.45,modeled
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing,10000000,3,0.3,43.3333,55.9,modeled

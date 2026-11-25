@@ -1,0 +1,12 @@
+timeframe,recommendation,baseline_usd,assumed_savings_pct,monthly_savings_usd,complexity,evidence_type
+0-30 days,Terminate idle GPUs,89.0,20.0,17.8,Low,modeled
+0-30 days,Use free development runtimes,89.0,10.0,8.9,Low,modeled
+0-30 days,Eliminate redundant runs,89.0,15.0,13.35,Low,modeled
+1-6 months,Optimize sequence packing,89.0,20.0,17.8,Medium,modeled
+1-6 months,Optimize training kernels,89.0,25.0,22.25,Medium,modeled
+1-6 months,Checkpoint-based recovery,89.0,10.0,8.9,Medium,modeled
+1-6 months,Interruptible GPU instances,89.0,40.0,35.6,Medium,modeled
+6+ months,Centralized GPU scheduling,89.0,30.0,26.7,High,modeled
+6+ months,Automated GPU selection,89.0,35.0,31.15,High,modeled
+6+ months,Shared artifact caching,89.0,10.0,8.9,Medium,modeled
+6+ months,Budget-aware orchestration,89.0,20.0,17.8,High,modeled

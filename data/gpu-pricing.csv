@@ -1,0 +1,6 @@
+provider,tier,gpu,vram_gib,usd_per_hour,assumed_tokens_per_second,checked_date,source
+RunPod,Secure Cloud,RTX 3090,24,0.50,350,2026-11-25,https://www.runpod.io/pricing
+RunPod,Secure Cloud,RTX 4090,24,0.89,600,2026-11-25,https://www.runpod.io/pricing
+RunPod,Secure Cloud,L40S,48,1.09,700,2026-11-25,https://www.runpod.io/pricing
+RunPod,Secure Cloud,H100 PCIe,80,2.89,1200,2026-11-25,https://www.runpod.io/pricing
+Lambda,On-demand,A10,24,1.29,250,2026-11-25,https://lambda.ai/pricing
