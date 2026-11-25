@@ -22,3 +22,9 @@ jobs:
 
       - name: Validate project
         run: make check
+
+      - name: Verify evidence integrity
+        run: sha256sum -c results/SHA256SUMS
+
+      - name: Detect artifact drift
+        run: git diff --exit-code -- results/

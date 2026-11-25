@@ -29,6 +29,17 @@ pytest and GitHub Actions.
 python -m pip install -r requirements-dev.txt
 make check
 
+## GPU Execution
+
+Run on a CUDA-compatible environment.
+
+    python -m pip install -r requirements.txt
+    python scripts/train.py --config configs/lora.yaml --dataset data/train.jsonl
+    python scripts/evaluate.py --adapter outputs/lora --dataset data/eval.jsonl
+
+Use `--resume` with a compatible checkpoint for recovery.
+Revised precision and resume support require GPU revalidation.
+
 ## Documentation
 
 - [Technical report](docs/report.md)

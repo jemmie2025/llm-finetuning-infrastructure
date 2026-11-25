@@ -140,6 +140,72 @@ quality and resource consumption before restoring service.
 Adapter disabling was exercised during evaluation.
 Production rollback and checkpoint recovery remain untested.
 
+## Operational Hardening
+
+### Memory Planning
+
+7B raw weights require approximately 13 GiB at 16-bit
+or 3.3 GiB at 4-bit. Full mixed-precision AdamW training
+may require 104-117 GiB before activations.
+
+### Risk Scoring
+
+| Risk | Likelihood x Impact | Priority |
+|---|---:|---|
+| Data and credential exposure | 4 x 5 = 20 | Critical |
+| Supply chain and GPU exhaustion | 4 x 4 = 16 | High |
+| Quality and cost overruns | 3 x 5 = 15 | High |
+| Recovery and reproducibility | 3 x 4 = 12 | Medium |
+
+Scores are preliminary assessments on a 1-5 scale.
+
+### Monitoring Thresholds
+
+- VRAM: above 90% sustained.
+- GPU utilization: below 60% during training for 10 minutes.
+- Throughput: degradation above 20%.
+- Training: non-finite loss or unexpected failure.
+- Budget: warning at 80%.
+
+Thresholds require workload-specific calibration.
+
+### Governance and Recovery
+
+Both Qwen models are distributed under Apache-2.0.
+Training data is synthetic and generated locally.
+
+Retain versioned adapters and checkpoints in controlled
+storage. Verify artifact integrity before restoration.
+
+Historical model revisions and complete dependency locks
+were not captured. Revised precision and checkpoint resume
+support require GPU revalidation.
+
+### Reference Cost Comparison
+
+10M tokens, one epoch, 15% overhead.
+
+| GPU | Estimated hours | Estimated cost |
+|---|---:|---:|
+| RTX 3090 | 9.13 | $4.56 |
+| RTX 4090 | 5.32 | $4.74 |
+| L40S | 4.56 | $4.97 |
+| H100 PCIe | 2.66 | $7.69 |
+| A10 | 12.78 | $16.48 |
+
+## Security Assessment
+
+Direct dependency scanning reported 28 findings initially.
+Upgrading pytest to 9.0.3 reduced this to 26 findings across
+Transformers, Accelerate and Datasets, including duplicate IDs.
+
+Credential signature scanning detected no matches.
+Transitive dependencies and Git history were not audited.
+
+Retain the validated GPU stack for isolated research only.
+Production adoption requires vulnerability remediation,
+compatibility testing and renewed GPU validation.
+
 ## Conclusion
 
 LoRA execution and adapter reload validated; 26 tests passed.

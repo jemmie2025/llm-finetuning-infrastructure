@@ -13,6 +13,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
     parser.add_argument("--dataset", required=True)
+    parser.add_argument("--resume", default=None)
     args = parser.parse_args()
 
     config = yaml.safe_load(Path(args.config).read_text())
@@ -35,7 +36,7 @@ def main():
         raise SystemExit("CUDA GPU required.")
 
     set_seed(train_cfg["seed"])
-    bf16 = torch.cuda.is_bf16_supported()
+    bf16 = torch.cuda.is_bf16_supported(including_emulation=False)
     dtype = torch.bfloat16 if bf16 else torch.float16
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -117,7 +118,7 @@ def main():
     torch.cuda.reset_peak_memory_stats()
     start = time.perf_counter()
 
-    result = trainer.train()
+    result = trainer.train(resume_from_checkpoint=args.resume)
 
     torch.cuda.synchronize()
     elapsed = time.perf_counter() - start
@@ -133,6 +134,7 @@ def main():
         "gpu": torch.cuda.get_device_name(0),
         "torch_version": str(torch.__version__),
         "cuda_version": torch.version.cuda,
+        "model_revision": getattr(model.config, "_commit_hash", None),
         "precision": str(dtype),
         "dataset_samples": len(dataset),
         "trainable_parameters": trainable,

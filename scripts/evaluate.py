@@ -21,7 +21,7 @@ def main():
     config = PeftConfig.from_pretrained(args.adapter)
     dtype = (
         torch.bfloat16
-        if torch.cuda.is_bf16_supported()
+        if torch.cuda.is_bf16_supported(including_emulation=False)
         else torch.float16
     )
 
