@@ -1,0 +1,88 @@
+{
+  "adapter_reload": "passed",
+  "samples": 10,
+  "baseline_exact_match_rate": 0.0,
+  "adapted_exact_match_rate": 0.3,
+  "responses": [
+    {
+      "prompt": "Check current directory.",
+      "expected": "pwd",
+      "baseline": "To check the current directory in a terminal, you can use the following command:\n\n```bash\npwd\n```\n\nThis command stands for \"print working directory\" and will display the path of the current directory you're in.\n\nLet me know if you'd like to navigate to a different directory or perform any other operations!",
+      "adapted": "Current directory: /home/username/\u684c\u9762/Python/Project",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Which command can I use to Check current directory?",
+      "expected": "pwd",
+      "baseline": "You can use the following command to check the current directory in the terminal:\n\n```bash\npwd\n```\n\n### Explanation:\n- `pwd` stands for **Print Working Directory**.\n- It prints the full path of the current working directory.\n\n### Example Output:\n```\n/home/user/myproject\n```\n\nThis command",
+      "adapted": "pwd",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Kubernetes services.",
+      "expected": "kubectl get services",
+      "baseline": "Kubernetes provides several built-in services that are used to manage and interact with the cluster. These services are part of the Kubernetes API and are used by various components of the system. Here's a list of the **primary Kubernetes services** and their purposes:\n\n---\n\n### \u2705 **1. Core Services (Built-in by",
+      "adapted": "Kubernetes provides several built-in services that are essential for managing and operating a cluster. These services are typically managed by the Kubernetes control plane and are used to handle various aspects of the cluster's lifecycle. Here is a list of the primary Kubernetes services:\n\n1. **Core Services**:\n   - **kube-apiserver",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Which command can I use to List Kubernetes services?",
+      "expected": "kubectl get services",
+      "baseline": "To list Kubernetes services, you can use the `kubectl` command-line tool, which is part of the Kubernetes CLI.\n\n### \u2705 Command to List Kubernetes Services:\n```bash\nkubectl get services\n```\n\n### \ud83d\udd0d What this does:\n- `kubectl get services` lists all the services defined in your Kubernetes cluster",
+      "adapted": "kubectl get services",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display Git commit history.",
+      "expected": "git log --oneline",
+      "baseline": "To display Git commit history, you can use the `git log` command in the terminal. Here's a basic guide on how to do it:\n\n---\n\n### \u2705 **Basic Git Commit History Command**\n\n```bash\ngit log\n```\n\nThis will show the commit history of your current repository, including:\n\n- Commit",
+      "adapted": "```\ngit log\n```",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Which command can I use to Display Git commit history?",
+      "expected": "git log --oneline",
+      "baseline": "To display the Git commit history, you can use the `git log` command. Here are some common ways to use it:\n\n### 1. **Basic Git Commit History**\n```bash\ngit log\n```\nThis will show the commit history of your current repository, including the commit hash, author, date,",
+      "adapted": "git log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Check Docker disk usage.",
+      "expected": "docker system df",
+      "baseline": "To check the **Docker disk usage**, you can use a few different methods depending on what you're trying to find out:\n\n---\n\n### \u2705 **1. Check Docker's own disk usage (system disk)**\n\nIf you're trying to see how much disk space Docker itself is using (not the images or containers",
+      "adapted": "To check Docker disk usage, you can use the `docker system info` command, which provides detailed information about the Docker system, including the disk usage. Here's how you can do it:\n\n### Step-by-Step Guide:\n\n1. **Open a terminal or command prompt.**\n2. **Run the following command",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Which command can I use to Check Docker disk usage?",
+      "expected": "docker system df",
+      "baseline": "To check the **Docker disk usage**, you can use the `docker system info` command, which provides a detailed overview of the Docker system, including the disk usage.\n\n### Command:\n```bash\ndocker system info\n```\n\n### What it shows:\n- **Total disk space used by Docker**: This is the",
+      "adapted": "docker system info",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Check system uptime.",
+      "expected": "uptime",
+      "baseline": "To check the **system uptime**, you can use different methods depending on the operating system you're using. Below are the steps for **Windows**, **Linux (Ubuntu/Debian)**, and **macOS**:\n\n---\n\n### **1. Windows (Windows 10/11)**\n#### Using Command Prompt",
+      "adapted": "The system is up and running.",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Which command can I use to Check system uptime?",
+      "expected": "uptime",
+      "baseline": "To check the **system uptime** on a **Linux** system, you can use the following command:\n\n### On Linux (using `uptime` command):\n```bash\nuptime\n```\n\nThis command displays the system uptime, along with the number of users, load averages, and other system information.\n\n---\n\n### On macOS",
+      "adapted": "uptime",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    }
+  ]
+}

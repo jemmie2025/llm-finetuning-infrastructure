@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "method": "lora",
+  "gpu": "Tesla T4",
+  "torch_version": "2.14.1+cu130",
+  "cuda_version": "13.0",
+  "precision": "torch.bfloat16",
+  "dataset_samples": 80,
+  "trainable_parameters": 3211264,
+  "total_parameters": 1723786240,
+  "training_steps": 20,
+  "training_loss": 4.371897459030151,
+  "runtime_seconds": 43.94,
+  "peak_allocated_vram_gib": 3.323,
+  "peak_reserved_vram_gib": 4.377,
+  "trainer_metrics": {
+    "train_runtime": 43.293,
+    "train_samples_per_second": 1.848,
+    "train_steps_per_second": 0.462,
+    "total_flos": 17646465429504.0,
+    "train_loss": 4.371897459030151
+  }
+}
