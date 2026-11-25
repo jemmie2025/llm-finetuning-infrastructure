@@ -4,10 +4,13 @@ Engineering assessment of LoRA, QLoRA and full fine-tuning,
 covering GPU efficiency, framework selection, FinOps and
 operational risk.
 
-## Stack
+## Technology Stack
 
-PyTorch, Transformers, TRL, PEFT, bitsandbytes, YAML,
-pytest and GitHub Actions.
+- Training: PyTorch, Transformers, TRL, PEFT and bitsandbytes.
+- GPU environment: Google Colab (NVIDIA Tesla T4).
+- Development: WSL2 (Ubuntu).
+- Configuration: YAML.
+- Testing and CI: pytest and GitHub Actions.
 
 ## Models
 
@@ -20,13 +23,14 @@ pytest and GitHub Actions.
 
 | Metric | Result |
 |---|---:|
+| Execution environment | Google Colab |
 | GPU | NVIDIA Tesla T4 |
 | Training steps | 20 |
 | Trainable parameters | 0.1863% |
 | Training runtime | 43.94 s |
 | Peak allocated VRAM | 3.323 GiB |
 | Training throughput | 1.848 samples/s |
-| Exact match (10 samples) | 0% to 30% |
+| Strict exact match (10 samples) | 0% to 30% |
 | Adapter reload | Passed |
 | Automated tests | 26 passed |
 
@@ -46,7 +50,11 @@ sha256sum -c results/SHA256SUMS
 
 ## GPU Execution
 
-Requires a compatible CUDA-enabled PyTorch environment.
+LoRA training and evaluation were performed on Google Colab
+using an NVIDIA Tesla T4 GPU.
+
+Reproduction requires a compatible CUDA-enabled PyTorch
+environment.
 
 ```bash
 python -m pip install -r requirements.txt
