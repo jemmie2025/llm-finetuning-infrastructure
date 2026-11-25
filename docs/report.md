@@ -123,6 +123,23 @@ access controls within six months, then centralize governance.
 
 These are proposed production improvements.
 
+## Rollback and Recovery
+
+| Failure | Recovery action |
+|---|---|
+| Model quality regression | Disable adapter or restore last approved adapter |
+| Training interruption | Resume from last valid checkpoint |
+| Configuration regression | Revert to last validated Git revision |
+| Dependency failure | Recreate last known-good environment |
+| Cost overrun | Stop training and enforce budget limits |
+
+Retain versioned adapters, configurations, checkpoints and
+evaluation results. Validate artifact integrity, inference
+quality and resource consumption before restoring service.
+
+Adapter disabling was exercised during evaluation.
+Production rollback and checkpoint recovery remain untested.
+
 ## Conclusion
 
 LoRA execution and adapter reload validated; 26 tests passed.
