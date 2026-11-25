@@ -1,0 +1,10 @@
+{"messages": [{"role": "user", "content": "Check current directory."}, {"role": "assistant", "content": "pwd"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check current directory?"}, {"role": "assistant", "content": "pwd"}]}
+{"messages": [{"role": "user", "content": "List Kubernetes services."}, {"role": "assistant", "content": "kubectl get services"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to List Kubernetes services?"}, {"role": "assistant", "content": "kubectl get services"}]}
+{"messages": [{"role": "user", "content": "Display Git commit history."}, {"role": "assistant", "content": "git log --oneline"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Display Git commit history?"}, {"role": "assistant", "content": "git log --oneline"}]}
+{"messages": [{"role": "user", "content": "Check Docker disk usage."}, {"role": "assistant", "content": "docker system df"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check Docker disk usage?"}, {"role": "assistant", "content": "docker system df"}]}
+{"messages": [{"role": "user", "content": "Check system uptime."}, {"role": "assistant", "content": "uptime"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check system uptime?"}, {"role": "assistant", "content": "uptime"}]}

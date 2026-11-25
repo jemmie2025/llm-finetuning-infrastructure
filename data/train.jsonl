@@ -1,0 +1,80 @@
+{"messages": [{"role": "user", "content": "Check disk utilization."}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check disk utilization?"}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Check disk utilization."}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "How do I Check disk utilization?"}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Check disk utilization."}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Check disk utilization?"}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Check disk utilization."}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Check disk utilization."}, {"role": "assistant", "content": "df -h"}]}
+{"messages": [{"role": "user", "content": "Check available memory."}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check available memory?"}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Check available memory."}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "How do I Check available memory?"}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Check available memory."}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Check available memory?"}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Check available memory."}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Check available memory."}, {"role": "assistant", "content": "free -h"}]}
+{"messages": [{"role": "user", "content": "List running Docker containers."}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to List running Docker containers?"}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to List running Docker containers."}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "How do I List running Docker containers?"}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to List running Docker containers."}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to List running Docker containers?"}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "Return only the command to List running Docker containers."}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to List running Docker containers."}, {"role": "assistant", "content": "docker ps"}]}
+{"messages": [{"role": "user", "content": "List Docker images."}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to List Docker images?"}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to List Docker images."}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "How do I List Docker images?"}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to List Docker images."}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to List Docker images?"}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "Return only the command to List Docker images."}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to List Docker images."}, {"role": "assistant", "content": "docker images"}]}
+{"messages": [{"role": "user", "content": "List Kubernetes pods."}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to List Kubernetes pods?"}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to List Kubernetes pods."}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "How do I List Kubernetes pods?"}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to List Kubernetes pods."}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to List Kubernetes pods?"}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "Return only the command to List Kubernetes pods."}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to List Kubernetes pods."}, {"role": "assistant", "content": "kubectl get pods"}]}
+{"messages": [{"role": "user", "content": "List Kubernetes nodes."}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to List Kubernetes nodes?"}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to List Kubernetes nodes."}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "How do I List Kubernetes nodes?"}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to List Kubernetes nodes."}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to List Kubernetes nodes?"}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Return only the command to List Kubernetes nodes."}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to List Kubernetes nodes."}, {"role": "assistant", "content": "kubectl get nodes"}]}
+{"messages": [{"role": "user", "content": "Validate Terraform configuration."}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Validate Terraform configuration?"}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Validate Terraform configuration."}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "How do I Validate Terraform configuration?"}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Validate Terraform configuration."}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Validate Terraform configuration?"}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Validate Terraform configuration."}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Validate Terraform configuration."}, {"role": "assistant", "content": "terraform validate"}]}
+{"messages": [{"role": "user", "content": "Check Git working tree status."}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check Git working tree status?"}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Check Git working tree status."}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "How do I Check Git working tree status?"}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Check Git working tree status."}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Check Git working tree status?"}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Check Git working tree status."}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Check Git working tree status."}, {"role": "assistant", "content": "git status"}]}
+{"messages": [{"role": "user", "content": "Check listening network sockets."}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check listening network sockets?"}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Check listening network sockets."}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "How do I Check listening network sockets?"}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Check listening network sockets."}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Check listening network sockets?"}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Check listening network sockets."}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Check listening network sockets."}, {"role": "assistant", "content": "ss -tuln"}]}
+{"messages": [{"role": "user", "content": "Check GPU utilization."}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "Which command can I use to Check GPU utilization?"}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "Provide the CLI command to Check GPU utilization."}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "How do I Check GPU utilization?"}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "Give the terminal command to Check GPU utilization."}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "What command should an engineer use to Check GPU utilization?"}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "Return only the command to Check GPU utilization."}, {"role": "assistant", "content": "nvidia-smi"}]}
+{"messages": [{"role": "user", "content": "Identify the command required to Check GPU utilization."}, {"role": "assistant", "content": "nvidia-smi"}]}
