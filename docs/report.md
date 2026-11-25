@@ -20,7 +20,16 @@ Memory estimates depend on batching, sequence length and optimizer.
 | Distributed training | Full/LoRA | Axolotl |
 | PyTorch research | LoRA/Full | torchtune |
 
-TRL and PEFT were validated; other frameworks were researched.
+### Framework Limitations
+
+| Framework | Limitation |
+|---|---|
+| TRL | Requires explicit integration and dependency management |
+| Axolotl | Configuration and GPU compatibility complexity |
+| Unsloth | Hardware, model and optimized kernel compatibility |
+| torchtune | Active development discontinued in 2025 |
+
+Only TRL and PEFT were execution-validated.
 
 ## Validated Experiment
 
@@ -54,7 +63,15 @@ Cost = tokens × epochs / throughput / 3600 ×
 [30 cost scenarios](../results/qlora-cost-comparison.csv)
 cover five GPUs across RunPod and Lambda.
 
-Throughput is assumed; storage, transfer and taxes are excluded.
+Throughput and runtime overhead are assumed.
+Storage, transfer and taxes are excluded.
+
+Pricing verified on 2026-11-25 against official
+[RunPod](https://www.runpod.io/pricing) and
+[Lambda](https://lambda.ai/pricing) published rates.
+All five rates matched; regional availability remains unverified.
+
+[Pricing inputs](../data/gpu-pricing.csv).
 
 ## FinOps Roadmap
 
@@ -82,9 +99,16 @@ Estimates are independent, not additive or realized.
 Roadmap: secure inputs immediately, validate recovery and
 access controls within six months, then centralize governance.
 
-Audit evidence: configs, datasets, metrics, evaluation and tests.
-Pending: security scans, license review, integrity checks,
-recovery testing and production audit logs.
+### Audit Preparation Checklist
+
+- [x] Training configurations and datasets retained.
+- [x] GPU metrics and evaluation evidence captured.
+- [x] Adapter reload and automated tests passed.
+- [x] Published GPU pricing verified.
+- [ ] Immutable model revisions and dependency lock.
+- [ ] Security scans and license review.
+- [ ] Artifact integrity and recovery testing.
+- [ ] Production access controls and audit logs.
 
 ## Performance and Scalability
 
