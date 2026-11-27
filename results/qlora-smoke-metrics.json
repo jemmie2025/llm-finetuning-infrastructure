@@ -1,0 +1,26 @@
+{
+  "loaded_in_4bit": true,
+  "quantized_layers": 196,
+  "model": "Qwen/Qwen3-1.7B",
+  "method": "qlora",
+  "gpu": "Tesla T4",
+  "torch_version": "2.14.1+cu130",
+  "cuda_version": "13.0",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "precision": "torch.float16",
+  "dataset_samples": 80,
+  "trainable_parameters": 3211264,
+  "total_parameters": 1723786240,
+  "training_steps": 20,
+  "training_loss": 4.39108145236969,
+  "runtime_seconds": 55.74,
+  "peak_allocated_vram_gib": 2.539,
+  "peak_reserved_vram_gib": 3.723,
+  "trainer_metrics": {
+    "train_runtime": 55.109,
+    "train_samples_per_second": 1.452,
+    "train_steps_per_second": 0.363,
+    "total_flos": 17646465429504.0,
+    "train_loss": 4.39108145236969
+  }
+}

@@ -9,7 +9,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--adapter", default="outputs/lora")
     parser.add_argument("--dataset", default="data/eval.jsonl")
+    parser.add_argument(
+        "--output", default="results/lora-evaluation.json"
+    )
     args = parser.parse_args()
+
+    output_path = Path(args.output)
+    if output_path.exists():
+        raise SystemExit(f"Refusing to overwrite: {output_path}")
 
     import torch
     from peft import PeftConfig, PeftModel
@@ -95,10 +102,9 @@ def main():
         "responses": results,
     }
 
-    Path("results").mkdir(exist_ok=True)
-    Path("results/lora-evaluation.json").write_text(
-        json.dumps(report, indent=2) + "\n"
-    )
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("x") as f:
+        f.write(json.dumps(report, indent=2) + "\n")
 
     print(json.dumps(report, indent=2))
 

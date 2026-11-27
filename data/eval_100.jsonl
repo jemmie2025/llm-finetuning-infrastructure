@@ -1,0 +1,100 @@
+{"category": "linux", "messages": [{"role": "user", "content": "Print the current effective username. Return only the command."}, {"role": "assistant", "content": "whoami"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Show numeric user and group IDs. Return only the command."}, {"role": "assistant", "content": "id"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Print the Linux kernel release. Return only the command."}, {"role": "assistant", "content": "uname -r"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "List block devices in a tree. Return only the command."}, {"role": "assistant", "content": "lsblk"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Display mounted filesystems using findmnt. Return only the command."}, {"role": "assistant", "content": "findmnt"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Locate bash using the command lookup builtin. Return only the command."}, {"role": "assistant", "content": "command -v bash"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Display the first ten lines of app.log. Return only the command."}, {"role": "assistant", "content": "head app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Display the last ten lines of app.log. Return only the command."}, {"role": "assistant", "content": "tail app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Count lines in app.log using wc. Return only the command."}, {"role": "assistant", "content": "wc -l app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Calculate the SHA-256 digest of app.log. Return only the command."}, {"role": "assistant", "content": "sha256sum app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Show the last 20 system journal entries. Return only the command."}, {"role": "assistant", "content": "journalctl -n 20"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Check whether nginx.service is active. Return only the command."}, {"role": "assistant", "content": "systemctl is-active nginx.service"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Check whether nginx.service is enabled. Return only the command."}, {"role": "assistant", "content": "systemctl is-enabled nginx.service"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "List failed systemd units. Return only the command."}, {"role": "assistant", "content": "systemctl --failed"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Display available processing units. Return only the command."}, {"role": "assistant", "content": "nproc"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Display operating system release information. Return only the command."}, {"role": "assistant", "content": "cat /etc/os-release"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Show the total human-readable size of /var/log. Return only the command."}, {"role": "assistant", "content": "du -sh /var/log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Find regular files named app.log under /tmp. Return only the command."}, {"role": "assistant", "content": "find /tmp -type f -name app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "Show metadata for app.log. Return only the command."}, {"role": "assistant", "content": "stat app.log"}]}
+{"category": "linux", "messages": [{"role": "user", "content": "List all processes using BSD-style ps syntax. Return only the command."}, {"role": "assistant", "content": "ps aux"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Show Docker client and server versions. Return only the command."}, {"role": "assistant", "content": "docker version"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Display Docker system information. Return only the command."}, {"role": "assistant", "content": "docker info"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "List all containers using the short all flag. Return only the command."}, {"role": "assistant", "content": "docker ps -a"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Display logs for container web. Return only the command."}, {"role": "assistant", "content": "docker logs web"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Follow logs for container web using the short flag. Return only the command."}, {"role": "assistant", "content": "docker logs -f web"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Inspect container web. Return only the command."}, {"role": "assistant", "content": "docker inspect web"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Show live Docker resource statistics. Return only the command."}, {"role": "assistant", "content": "docker stats"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "List processes inside container web. Return only the command."}, {"role": "assistant", "content": "docker top web"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Show port mappings for container web. Return only the command."}, {"role": "assistant", "content": "docker port web"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "List Docker networks. Return only the command."}, {"role": "assistant", "content": "docker network ls"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Inspect Docker network backend. Return only the command."}, {"role": "assistant", "content": "docker network inspect backend"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "List Docker volumes. Return only the command."}, {"role": "assistant", "content": "docker volume ls"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Inspect Docker volume appdata. Return only the command."}, {"role": "assistant", "content": "docker volume inspect appdata"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Display nginx:alpine image history. Return only the command."}, {"role": "assistant", "content": "docker history nginx:alpine"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Pull the nginx:alpine image. Return only the command."}, {"role": "assistant", "content": "docker pull nginx:alpine"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Build the current directory with tag app:local. Return only the command."}, {"role": "assistant", "content": "docker build -t app:local ."}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Show Docker Compose container status. Return only the command."}, {"role": "assistant", "content": "docker compose ps"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Display resolved Docker Compose configuration. Return only the command."}, {"role": "assistant", "content": "docker compose config"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "Show Docker Compose version. Return only the command."}, {"role": "assistant", "content": "docker compose version"}]}
+{"category": "docker", "messages": [{"role": "user", "content": "List images used by created Compose containers. Return only the command."}, {"role": "assistant", "content": "docker compose images"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Display the current Kubernetes context. Return only the command."}, {"role": "assistant", "content": "kubectl config current-context"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes contexts. Return only the command."}, {"role": "assistant", "content": "kubectl config get-contexts"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Show only the Kubernetes client version. Return only the command."}, {"role": "assistant", "content": "kubectl version --client"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Display Kubernetes cluster information. Return only the command."}, {"role": "assistant", "content": "kubectl cluster-info"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes namespaces. Return only the command."}, {"role": "assistant", "content": "kubectl get namespaces"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes deployments. Return only the command."}, {"role": "assistant", "content": "kubectl get deployments"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes StatefulSets. Return only the command."}, {"role": "assistant", "content": "kubectl get statefulsets"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes DaemonSets. Return only the command."}, {"role": "assistant", "content": "kubectl get daemonsets"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes Jobs. Return only the command."}, {"role": "assistant", "content": "kubectl get jobs"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes CronJobs. Return only the command."}, {"role": "assistant", "content": "kubectl get cronjobs"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes ConfigMaps. Return only the command."}, {"role": "assistant", "content": "kubectl get configmaps"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List persistent volume claims using pvc. Return only the command."}, {"role": "assistant", "content": "kubectl get pvc"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List persistent volumes using pv. Return only the command."}, {"role": "assistant", "content": "kubectl get pv"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List Kubernetes Ingress resources. Return only the command."}, {"role": "assistant", "content": "kubectl get ingress"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Display Kubernetes events. Return only the command."}, {"role": "assistant", "content": "kubectl get events"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Describe deployment web. Return only the command."}, {"role": "assistant", "content": "kubectl describe deployment web"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Display logs for pod web. Return only the command."}, {"role": "assistant", "content": "kubectl logs web"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Show rollout status for deployment web. Return only the command."}, {"role": "assistant", "content": "kubectl rollout status deployment/web"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "List supported Kubernetes API resources. Return only the command."}, {"role": "assistant", "content": "kubectl api-resources"}]}
+{"category": "kubernetes", "messages": [{"role": "user", "content": "Check permission to list Kubernetes pods. Return only the command."}, {"role": "assistant", "content": "kubectl auth can-i list pods"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display the Git version using the version flag. Return only the command."}, {"role": "assistant", "content": "git --version"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List local Git branches. Return only the command."}, {"role": "assistant", "content": "git branch"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display only the current Git branch name. Return only the command."}, {"role": "assistant", "content": "git branch --show-current"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List remote-tracking Git branches. Return only the command."}, {"role": "assistant", "content": "git branch -r"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List Git remotes and their URLs. Return only the command."}, {"role": "assistant", "content": "git remote -v"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display the URL of Git remote origin. Return only the command."}, {"role": "assistant", "content": "git remote get-url origin"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display unstaged Git changes. Return only the command."}, {"role": "assistant", "content": "git diff"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display staged Git changes using cached. Return only the command."}, {"role": "assistant", "content": "git diff --cached"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display the current HEAD commit ID. Return only the command."}, {"role": "assistant", "content": "git rev-parse HEAD"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display the absolute Git repository root. Return only the command."}, {"role": "assistant", "content": "git rev-parse --show-toplevel"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List Git tags. Return only the command."}, {"role": "assistant", "content": "git tag"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Show the latest Git commit with its patch. Return only the command."}, {"role": "assistant", "content": "git show"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List files tracked by Git. Return only the command."}, {"role": "assistant", "content": "git ls-files"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display the configured Git user email. Return only the command."}, {"role": "assistant", "content": "git config user.email"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Show the ignore rule for .env using the verbose flag. Return only the command."}, {"role": "assistant", "content": "git check-ignore -v .env"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display Git reference update history. Return only the command."}, {"role": "assistant", "content": "git reflog"}]}
+{"category": "git", "messages": [{"role": "user", "content": "List saved Git stashes. Return only the command."}, {"role": "assistant", "content": "git stash list"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Display line-by-line attribution for README.md. Return only the command."}, {"role": "assistant", "content": "git blame README.md"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Check Git object integrity. Return only the command."}, {"role": "assistant", "content": "git fsck"}]}
+{"category": "git", "messages": [{"role": "user", "content": "Fetch Git updates from origin. Return only the command."}, {"role": "assistant", "content": "git fetch origin"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Display the Terraform CLI version. Return only the command."}, {"role": "assistant", "content": "terraform version"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Initialize the Terraform working directory. Return only the command."}, {"role": "assistant", "content": "terraform init"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Generate a Terraform execution plan. Return only the command."}, {"role": "assistant", "content": "terraform plan"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Check Terraform formatting without modifying files. Return only the command."}, {"role": "assistant", "content": "terraform fmt -check"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "List Terraform state resource addresses. Return only the command."}, {"role": "assistant", "content": "terraform state list"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Display the current Terraform state. Return only the command."}, {"role": "assistant", "content": "terraform show"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Display Terraform provider requirements. Return only the command."}, {"role": "assistant", "content": "terraform providers"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "List Terraform workspaces. Return only the command."}, {"role": "assistant", "content": "terraform workspace list"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Display the current Terraform workspace. Return only the command."}, {"role": "assistant", "content": "terraform workspace show"}]}
+{"category": "terraform", "messages": [{"role": "user", "content": "Display Terraform root module output values. Return only the command."}, {"role": "assistant", "content": "terraform output"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Display network interfaces using ip address show. Return only the command."}, {"role": "assistant", "content": "ip address show"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Display the IPv4 routing table using ip route show. Return only the command."}, {"role": "assistant", "content": "ip route show"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Display the network neighbor table. Return only the command."}, {"role": "assistant", "content": "ip neighbor show"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Send four ICMP echo requests to 1.1.1.1. Return only the command."}, {"role": "assistant", "content": "ping -c 4 1.1.1.1"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Query the default DNS record for example.com using dig. Return only the command."}, {"role": "assistant", "content": "dig example.com"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Query the MX record for example.com using dig. Return only the command."}, {"role": "assistant", "content": "dig example.com MX"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Resolve example.com using nslookup. Return only the command."}, {"role": "assistant", "content": "nslookup example.com"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Request HTTP headers from https://example.com using curl. Return only the command."}, {"role": "assistant", "content": "curl -I https://example.com"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Trace the network path to example.com. Return only the command."}, {"role": "assistant", "content": "traceroute example.com"}]}
+{"category": "networking", "messages": [{"role": "user", "content": "Display the system hostname. Return only the command."}, {"role": "assistant", "content": "hostname"}]}

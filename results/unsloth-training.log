@@ -1,0 +1,179 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2026.11.10: Fast Qwen2 patching. Transformers: 5.17.0.
+   \\   /|    Tesla T4. Num GPUs = 1. Max memory: 14.563 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.10.0+cu126. CUDA: 7.5. CUDA Toolkit: 12.6. Triton: 3.6.0
+\        /    Bfloat16 = FALSE. FA [Xformers = 0.0.34. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Unsloth: use_gradient_checkpointing = True turns off smart offloading for every model in this process, including ones loaded with "unsloth" earlier.
+Unsloth: not enough free memory for dataset tokenization workers (~1GB each); tokenizing in-process.
+🦥 Unsloth: Padding-free auto-enabled, enabling faster training.
+{'loss': '4.818', 'grad_norm': 'nan', 'learning_rate': '0', 'epoch': '0.05'}
+{'loss': '5.257', 'grad_norm': '16.86', 'learning_rate': '0', 'epoch': '0.1'}
+{'loss': '4.975', 'grad_norm': '16.2', 'learning_rate': '1e-05', 'epoch': '0.15'}
+{'loss': '4.865', 'grad_norm': '15.67', 'learning_rate': '2e-05', 'epoch': '0.2'}
+{'loss': '4.862', 'grad_norm': '15.71', 'learning_rate': '1.889e-05', 'epoch': '0.25'}
+{'loss': '4.83', 'grad_norm': '16.42', 'learning_rate': '1.778e-05', 'epoch': '0.3'}
+{'loss': '4.565', 'grad_norm': '16.07', 'learning_rate': '1.667e-05', 'epoch': '0.35'}
+{'loss': '4.5', 'grad_norm': 'nan', 'learning_rate': '1.556e-05', 'epoch': '0.4'}
+{'loss': '4.448', 'grad_norm': '16.18', 'learning_rate': '1.556e-05', 'epoch': '0.45'}
+{'loss': '4.423', 'grad_norm': '16.58', 'learning_rate': '1.444e-05', 'epoch': '0.5'}
+{'loss': '4.343', 'grad_norm': '16.15', 'learning_rate': '1.333e-05', 'epoch': '0.55'}
+{'loss': '4.264', 'grad_norm': '14.77', 'learning_rate': '1.222e-05', 'epoch': '0.6'}
+{'loss': '4.088', 'grad_norm': '14.69', 'learning_rate': '1.111e-05', 'epoch': '0.65'}
+{'loss': '4.182', 'grad_norm': '13.9', 'learning_rate': '1e-05', 'epoch': '0.7'}
+{'loss': '4.086', 'grad_norm': '12.03', 'learning_rate': '8.889e-06', 'epoch': '0.75'}
+{'loss': '4.164', 'grad_norm': '11.57', 'learning_rate': '7.778e-06', 'epoch': '0.8'}
+{'loss': '4.119', 'grad_norm': '9.908', 'learning_rate': '6.667e-06', 'epoch': '0.85'}
+{'loss': '4.221', 'grad_norm': '11.87', 'learning_rate': '5.556e-06', 'epoch': '0.9'}
+{'loss': '4.265', 'grad_norm': '10.55', 'learning_rate': '4.444e-06', 'epoch': '0.95'}
+{'loss': '4.195', 'grad_norm': '9.508', 'learning_rate': '3.333e-06', 'epoch': '1'}
+{'train_runtime': '36.97', 'train_samples_per_second': '2.164', 'train_steps_per_second': '0.541', 'train_loss': '4.474', 'epoch': '1'}
+{
+  "framework": "Unsloth + TRL",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "requested_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "method": "lora",
+  "gpu": "Tesla T4",
+  "samples": 80,
+  "dataset_sha256": "bcedda7e1081bd29f95bbeae157392988193b85da9a0d31c73c3f921636e03f1",
+  "steps": 20,
+  "learning_rate": 2e-05,
+  "trainable_parameters": 1081344,
+  "total_parameters": 495114112,
+  "weights_updated": true,
+  "training_loss": 4.473500108718872,
+  "runtime_seconds": 38.54,
+  "peak_allocated_vram_gib": 0.992,
+  "peak_reserved_vram_gib": 1.076,
+  "throughput_samples_per_second": 2.164,
+  "versions": {
+    "unsloth": "2026.11.10",
+    "unsloth-zoo": "2026.11.12",
+    "torch": "2.10.0+cu126",
+    "transformers": "5.17.0",
+    "trl": "1.15.0",
+    "peft": "0.22.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.16.0",
+    "datasets": "4.8.5"
+  }
+}
+UNSLOTH TRAINING: PASSED
+
+/content/unsloth-env/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/290 [00:02<10:29,  2.18s/it]
+Loading weights:  39%|███▉      | 113/290 [00:02<00:02, 68.68it/s]
+Loading weights:  59%|█████▊    | 170/290 [00:02<00:01, 83.37it/s]
+Loading weights:  71%|███████▏  | 207/290 [00:03<00:00, 85.42it/s]
+Loading weights:  80%|████████  | 233/290 [00:03<00:00, 85.08it/s]
+Loading weights:  87%|████████▋ | 253/290 [00:03<00:00, 94.99it/s]
+Loading weights:  94%|█████████▍| 273/290 [00:03<00:00, 85.44it/s]
+Loading weights:  99%|█████████▉| 288/290 [00:04<00:00, 87.91it/s]
+Loading weights: 100%|██████████| 290/290 [00:04<00:00, 71.27it/s]
+Not an error, but Unsloth cannot patch MLP layers with our manual autograd engine since either LoRA adapters
+are not enabled or a bias term (like in Qwen) is used.
+Unsloth 2026.11.10 patched 24 layers with 24 QKV layers, 24 O layers and 0 MLP layers.
+
+Generating train split: 0 examples [00:00, ? examples/s]
+Generating train split: 80 examples [00:00, 7164.24 examples/s]
+
+Unsloth: Tokenizing ["messages"]:   0%|          | 0/80 [00:00<?, ? examples/s]
+Unsloth: Tokenizing ["messages"]: 100%|██████████| 80/80 [00:00<00:00, 2103.79 examples/s]
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 80 | Num Epochs = 1 | Total steps = 20
+O^O/ \_/ \    Batch size per device = 1 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (1 x 4 x 1) = 4
+ "-____-"     Trainable parameters = 1,081,344 of 495,114,112 (0.22% trained)
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+  5%|▌         | 1/20 [00:10<03:14, 10.26s/it]
+                                              
+
+  5%|▌         | 1/20 [00:10<03:14, 10.26s/it]
+ 10%|█         | 2/20 [00:11<01:29,  4.97s/it]
+                                              
+
+ 10%|█         | 2/20 [00:11<01:29,  4.97s/it]
+ 15%|█▌        | 3/20 [00:12<00:54,  3.21s/it]
+                                              
+
+ 15%|█▌        | 3/20 [00:12<00:54,  3.21s/it]
+ 20%|██        | 4/20 [00:13<00:37,  2.34s/it]
+                                              
+
+ 20%|██        | 4/20 [00:13<00:37,  2.34s/it]
+ 25%|██▌       | 5/20 [00:15<00:34,  2.32s/it]
+                                              
+
+ 25%|██▌       | 5/20 [00:15<00:34,  2.32s/it]
+ 30%|███       | 6/20 [00:21<00:48,  3.49s/it]
+                                              
+
+ 30%|███       | 6/20 [00:21<00:48,  3.49s/it]
+ 35%|███▌      | 7/20 [00:22<00:36,  2.77s/it]
+                                              
+
+ 35%|███▌      | 7/20 [00:22<00:36,  2.77s/it]
+ 40%|████      | 8/20 [00:23<00:26,  2.20s/it]
+                                              
+
+ 40%|████      | 8/20 [00:23<00:26,  2.20s/it]
+ 45%|████▌     | 9/20 [00:24<00:20,  1.83s/it]
+                                              
+
+ 45%|████▌     | 9/20 [00:24<00:20,  1.83s/it]
+ 50%|█████     | 10/20 [00:26<00:15,  1.58s/it]
+                                               
+
+ 50%|█████     | 10/20 [00:26<00:15,  1.58s/it]
+ 55%|█████▌    | 11/20 [00:27<00:12,  1.41s/it]
+                                               
+
+ 55%|█████▌    | 11/20 [00:27<00:12,  1.41s/it]
+ 60%|██████    | 12/20 [00:28<00:10,  1.28s/it]
+                                               
+
+ 60%|██████    | 12/20 [00:28<00:10,  1.28s/it]
+ 65%|██████▌   | 13/20 [00:28<00:08,  1.19s/it]
+                                               
+
+ 65%|██████▌   | 13/20 [00:28<00:08,  1.19s/it]
+ 70%|███████   | 14/20 [00:30<00:06,  1.15s/it]
+                                               
+
+ 70%|███████   | 14/20 [00:30<00:06,  1.15s/it]
+ 75%|███████▌  | 15/20 [00:31<00:05,  1.20s/it]
+                                               
+
+ 75%|███████▌  | 15/20 [00:31<00:05,  1.20s/it]
+ 80%|████████  | 16/20 [00:32<00:05,  1.25s/it]
+                                               
+
+ 80%|████████  | 16/20 [00:32<00:05,  1.25s/it]
+ 85%|████████▌ | 17/20 [00:33<00:03,  1.21s/it]
+                                               
+
+ 85%|████████▌ | 17/20 [00:33<00:03,  1.21s/it]
+ 90%|█████████ | 18/20 [00:34<00:02,  1.17s/it]
+                                               
+
+ 90%|█████████ | 18/20 [00:34<00:02,  1.17s/it]
+ 95%|█████████▌| 19/20 [00:35<00:01,  1.12s/it]
+                                               
+
+ 95%|█████████▌| 19/20 [00:35<00:01,  1.12s/it]
+100%|██████████| 20/20 [00:36<00:00,  1.09s/it]
+                                               
+
+100%|██████████| 20/20 [00:36<00:00,  1.09s/it]
+                                               
+
+100%|██████████| 20/20 [00:36<00:00,  1.09s/it]
+100%|██████████| 20/20 [00:36<00:00,  1.85s/it]

@@ -1,0 +1,808 @@
+{
+  "adapter_reload": "passed",
+  "samples": 100,
+  "baseline_exact_match_rate": 0.39,
+  "adapted_exact_match_rate": 0.5,
+  "responses": [
+    {
+      "prompt": "Print the current effective username. Return only the command.",
+      "expected": "whoami",
+      "baseline": "whoami",
+      "adapted": "whoami",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Show numeric user and group IDs. Return only the command.",
+      "expected": "id",
+      "baseline": "id -u -g",
+      "adapted": "id -u",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Print the Linux kernel release. Return only the command.",
+      "expected": "uname -r",
+      "baseline": "uname -r",
+      "adapted": "uname -r",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List block devices in a tree. Return only the command.",
+      "expected": "lsblk",
+      "baseline": "`lsblk`",
+      "adapted": "lsblk",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display mounted filesystems using findmnt. Return only the command.",
+      "expected": "findmnt",
+      "baseline": "findmnt",
+      "adapted": "findmnt",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Locate bash using the command lookup builtin. Return only the command.",
+      "expected": "command -v bash",
+      "baseline": "```bash\nbuiltin\n```",
+      "adapted": "locate",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the first ten lines of app.log. Return only the command.",
+      "expected": "head app.log",
+      "baseline": "tail -n 10 app.log",
+      "adapted": "tail -n 10 /var/log/app.log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the last ten lines of app.log. Return only the command.",
+      "expected": "tail app.log",
+      "baseline": "tail -n +10 app.log",
+      "adapted": "tail -n 10 app.log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Count lines in app.log using wc. Return only the command.",
+      "expected": "wc -l app.log",
+      "baseline": "`wc -l app.log`",
+      "adapted": "wc -l app.log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Calculate the SHA-256 digest of app.log. Return only the command.",
+      "expected": "sha256sum app.log",
+      "baseline": "sha256sum app.log",
+      "adapted": "sha256sum app.log",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Show the last 20 system journal entries. Return only the command.",
+      "expected": "journalctl -n 20",
+      "baseline": "system journal entry: command executed",
+      "adapted": "system journal entries",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Check whether nginx.service is active. Return only the command.",
+      "expected": "systemctl is-active nginx.service",
+      "baseline": "nginx.service is active.",
+      "adapted": "nginx.service",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Check whether nginx.service is enabled. Return only the command.",
+      "expected": "systemctl is-enabled nginx.service",
+      "baseline": "nginx.service",
+      "adapted": "systemctl is-enabled nginx.service",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List failed systemd units. Return only the command.",
+      "expected": "systemctl --failed",
+      "baseline": "systemctl --failed",
+      "adapted": "systemctl --failed",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display available processing units. Return only the command.",
+      "expected": "nproc",
+      "baseline": "display available processing units",
+      "adapted": "nproc",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display operating system release information. Return only the command.",
+      "expected": "cat /etc/os-release",
+      "baseline": "os-release",
+      "adapted": "os-release",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show the total human-readable size of /var/log. Return only the command.",
+      "expected": "du -sh /var/log",
+      "baseline": "df /var/log",
+      "adapted": "du -sh /var/log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Find regular files named app.log under /tmp. Return only the command.",
+      "expected": "find /tmp -type f -name app.log",
+      "baseline": "find /tmp -type f -name \"app.log\"",
+      "adapted": "find /tmp -type f -name \"app.log\"",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show metadata for app.log. Return only the command.",
+      "expected": "stat app.log",
+      "baseline": "app.log",
+      "adapted": "app.log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List all processes using BSD-style ps syntax. Return only the command.",
+      "expected": "ps aux",
+      "baseline": "ps -ef | grep -E '^[0-9]+[a-zA-Z0-9_]+[0-9]+[a-zA-Z0-9_]+[0-9]+'",
+      "adapted": "ps -ef | grep -v grep",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show Docker client and server versions. Return only the command.",
+      "expected": "docker version",
+      "baseline": "docker --version",
+      "adapted": "docker --version",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display Docker system information. Return only the command.",
+      "expected": "docker info",
+      "baseline": "docker info",
+      "adapted": "docker info",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List all containers using the short all flag. Return only the command.",
+      "expected": "docker ps -a",
+      "baseline": "docker ps -a --filter \"name=*\" --filter \"status=running\" --filter \"all=true\" --format \"{{.ID}}\"",
+      "adapted": "docker ps -a --filter \"name=*\" --filter \"status=running\" -q",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display logs for container web. Return only the command.",
+      "expected": "docker logs web",
+      "baseline": "docker logs -f web",
+      "adapted": "docker logs -f web",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Follow logs for container web using the short flag. Return only the command.",
+      "expected": "docker logs -f web",
+      "baseline": "docker container logs <container_name> --short-id",
+      "adapted": "docker logs -f web",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Inspect container web. Return only the command.",
+      "expected": "docker inspect web",
+      "baseline": "docker run -d -p 80:80 --name container-web --restart always --env-file .env --volume /var/lib/docker/volumes/container-web:/var/lib/docker/volumes/container-web -e PORT=80 -e HOST=0.0.0.0 -e TZ=UTC",
+      "adapted": "docker run -d -p 80:80 --name container-web --restart always --env-file .env --volume /var/lib/docker/volumes:/var/lib/docker/volumes -e PORT=80 -e HOST=0.0.0.0 -e TZ=UTC -e LOG_LEVEL",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show live Docker resource statistics. Return only the command.",
+      "expected": "docker stats",
+      "baseline": "docker stats",
+      "adapted": "docker stats",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List processes inside container web. Return only the command.",
+      "expected": "docker top web",
+      "baseline": "nginx",
+      "adapted": "docker ps -a",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show port mappings for container web. Return only the command.",
+      "expected": "docker port web",
+      "baseline": "nginx -g \"daemon off;\"",
+      "adapted": "docker port 8080",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Docker networks. Return only the command.",
+      "expected": "docker network ls",
+      "baseline": "docker network ls",
+      "adapted": "docker network ls",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Inspect Docker network backend. Return only the command.",
+      "expected": "docker network inspect backend",
+      "baseline": "docker network inspect <network-name>",
+      "adapted": "docker network inspect",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Docker volumes. Return only the command.",
+      "expected": "docker volume ls",
+      "baseline": "docker volume ls",
+      "adapted": "docker volume ls",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Inspect Docker volume appdata. Return only the command.",
+      "expected": "docker volume inspect appdata",
+      "baseline": "docker volume inspect appdata",
+      "adapted": "docker volume inspect appdata",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display nginx:alpine image history. Return only the command.",
+      "expected": "docker history nginx:alpine",
+      "baseline": "nginx:alpine history",
+      "adapted": "nginx:alpine@sha256:5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Pull the nginx:alpine image. Return only the command.",
+      "expected": "docker pull nginx:alpine",
+      "baseline": "nginx:alpine",
+      "adapted": "nginx:alpine",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Build the current directory with tag app:local. Return only the command.",
+      "expected": "docker build -t app:local .",
+      "baseline": "cd app:local",
+      "adapted": "git tag -a app:local -m \"Local version\"",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show Docker Compose container status. Return only the command.",
+      "expected": "docker compose ps",
+      "baseline": "docker-compose ps",
+      "adapted": "docker ps",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display resolved Docker Compose configuration. Return only the command.",
+      "expected": "docker compose config",
+      "baseline": "docker-compose up -d",
+      "adapted": "docker-compose up -d",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show Docker Compose version. Return only the command.",
+      "expected": "docker compose version",
+      "baseline": "docker compose version",
+      "adapted": "docker compose version",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List images used by created Compose containers. Return only the command.",
+      "expected": "docker compose images",
+      "baseline": "docker inspect --format='{{.Images}}' <container-name>",
+      "adapted": "docker inspect --format='{{.Images}}'",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the current Kubernetes context. Return only the command.",
+      "expected": "kubectl config current-context",
+      "baseline": "kubectl get nodes",
+      "adapted": "kubectl get nodes",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Kubernetes contexts. Return only the command.",
+      "expected": "kubectl config get-contexts",
+      "baseline": "kubectl context list",
+      "adapted": "kubectl get contexts",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show only the Kubernetes client version. Return only the command.",
+      "expected": "kubectl version --client",
+      "baseline": "kubectl version",
+      "adapted": "kubectl version",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display Kubernetes cluster information. Return only the command.",
+      "expected": "kubectl cluster-info",
+      "baseline": "kubectl get clusters",
+      "adapted": "kubectl get clusters",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Kubernetes namespaces. Return only the command.",
+      "expected": "kubectl get namespaces",
+      "baseline": "kubectl get namespaces",
+      "adapted": "kubectl get namespaces",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Kubernetes deployments. Return only the command.",
+      "expected": "kubectl get deployments",
+      "baseline": "kubectl get deployments",
+      "adapted": "kubectl get deployments",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Kubernetes StatefulSets. Return only the command.",
+      "expected": "kubectl get statefulsets",
+      "baseline": "kubectl describe statefulset <statefulset-name>",
+      "adapted": "kubectl create statefulset my-statefulset --image=nginx --replicas=3",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Kubernetes DaemonSets. Return only the command.",
+      "expected": "kubectl get daemonsets",
+      "baseline": "```bash\nkubectl get daemonset\n```",
+      "adapted": "kubectl get daemonset",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Kubernetes Jobs. Return only the command.",
+      "expected": "kubectl get jobs",
+      "baseline": "```bash\nkubectl get jobs\n```",
+      "adapted": "kubectl get jobs",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Kubernetes CronJobs. Return only the command.",
+      "expected": "kubectl get cronjobs",
+      "baseline": "kubectl get cronjobs",
+      "adapted": "kubectl get cronjobs",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Kubernetes ConfigMaps. Return only the command.",
+      "expected": "kubectl get configmaps",
+      "baseline": "kubectl get configmaps",
+      "adapted": "kubectl get configmaps",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List persistent volume claims using pvc. Return only the command.",
+      "expected": "kubectl get pvc",
+      "baseline": "kubectl get pvc --all-namespaces",
+      "adapted": "kubectl get pvc",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List persistent volumes using pv. Return only the command.",
+      "expected": "kubectl get pv",
+      "baseline": "pv --list",
+      "adapted": "pv",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Kubernetes Ingress resources. Return only the command.",
+      "expected": "kubectl get ingress",
+      "baseline": "kubectl get ingress",
+      "adapted": "kubectl get ingress",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display Kubernetes events. Return only the command.",
+      "expected": "kubectl get events",
+      "baseline": "kubectl get events",
+      "adapted": "kubectl get events",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Describe deployment web. Return only the command.",
+      "expected": "kubectl describe deployment web",
+      "baseline": "nginx -g \"daemon off;\"",
+      "adapted": "docker run -d -p 80:80 --name deployment-web -v /path/to/your/app:/app -e PORT=80 -e ENV=production -e DATABASE_URL=your_database_url -e JWT_SECRET=your_jwt_secret -e REDIS_URL=your_redis_url -e",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display logs for pod web. Return only the command.",
+      "expected": "kubectl logs web",
+      "baseline": "kubectl logs -n <namespace> web",
+      "adapted": "kubectl logs web",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Show rollout status for deployment web. Return only the command.",
+      "expected": "kubectl rollout status deployment/web",
+      "baseline": "kubectl get deployment web --show-labels",
+      "adapted": "kubectl get deployment web -o json | grep rollout,state",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List supported Kubernetes API resources. Return only the command.",
+      "expected": "kubectl api-resources",
+      "baseline": "kubectl api-resources",
+      "adapted": "kubectl api-resources",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Check permission to list Kubernetes pods. Return only the command.",
+      "expected": "kubectl auth can-i list pods",
+      "baseline": "kubectl get pods",
+      "adapted": "kubectl get pods",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the Git version using the version flag. Return only the command.",
+      "expected": "git --version",
+      "baseline": "git --version",
+      "adapted": "git --version",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List local Git branches. Return only the command.",
+      "expected": "git branch",
+      "baseline": "git branch",
+      "adapted": "git branch",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display only the current Git branch name. Return only the command.",
+      "expected": "git branch --show-current",
+      "baseline": "git rev-parse --abbrev-commit HEAD",
+      "adapted": "git rev-parse --abbrev-commit HEAD",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List remote-tracking Git branches. Return only the command.",
+      "expected": "git branch -r",
+      "baseline": "git branch --track",
+      "adapted": "git branch -r",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Git remotes and their URLs. Return only the command.",
+      "expected": "git remote -v",
+      "baseline": "git remote -v",
+      "adapted": "git remote -v",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the URL of Git remote origin. Return only the command.",
+      "expected": "git remote get-url origin",
+      "baseline": "git remote -v | grep origin",
+      "adapted": "git remote -v | grep origin",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display unstaged Git changes. Return only the command.",
+      "expected": "git diff",
+      "baseline": "git status",
+      "adapted": "git status",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display staged Git changes using cached. Return only the command.",
+      "expected": "git diff --cached",
+      "baseline": "git diff --cached",
+      "adapted": "git diff --cached",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the current HEAD commit ID. Return only the command.",
+      "expected": "git rev-parse HEAD",
+      "baseline": "git rev-parse HEAD",
+      "adapted": "git rev-parse HEAD",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the absolute Git repository root. Return only the command.",
+      "expected": "git rev-parse --show-toplevel",
+      "baseline": "git rev-parse --show-toplevel",
+      "adapted": "git rev-parse --show-toplevel",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "List Git tags. Return only the command.",
+      "expected": "git tag",
+      "baseline": "git tag",
+      "adapted": "git tag",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Show the latest Git commit with its patch. Return only the command.",
+      "expected": "git show",
+      "baseline": "git log -1 --pretty=format:'%h %s'",
+      "adapted": "git log -1 --pretty=format:'%h %s'",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List files tracked by Git. Return only the command.",
+      "expected": "git ls-files",
+      "baseline": "git ls-files",
+      "adapted": "git ls-files",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the configured Git user email. Return only the command.",
+      "expected": "git config user.email",
+      "baseline": "git config --get user.email",
+      "adapted": "git config --get user.email",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Show the ignore rule for .env using the verbose flag. Return only the command.",
+      "expected": "git check-ignore -v .env",
+      "baseline": "envignore --verbose",
+      "adapted": "docker-compose -f docker-compose.yml --verbose --ignore .env",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display Git reference update history. Return only the command.",
+      "expected": "git reflog",
+      "baseline": "git log --oneline",
+      "adapted": "git log",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List saved Git stashes. Return only the command.",
+      "expected": "git stash list",
+      "baseline": "git stash list",
+      "adapted": "git stash list",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display line-by-line attribution for README.md. Return only the command.",
+      "expected": "git blame README.md",
+      "baseline": "```bash\ngit clone https://github.com/yourusername/yourrepo.git\ncd yourrepo\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit remote add origin https://github.com/yourusername/yourrepo.git\ngit push -u origin master\n```",
+      "adapted": "git blame README.md",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Check Git object integrity. Return only the command.",
+      "expected": "git fsck",
+      "baseline": "git verify-object --integrity",
+      "adapted": "git verify-object",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Fetch Git updates from origin. Return only the command.",
+      "expected": "git fetch origin",
+      "baseline": "git fetch origin",
+      "adapted": "git fetch origin",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the Terraform CLI version. Return only the command.",
+      "expected": "terraform version",
+      "baseline": "terraform version",
+      "adapted": "terraform version",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Initialize the Terraform working directory. Return only the command.",
+      "expected": "terraform init",
+      "baseline": "terraform init",
+      "adapted": "terraform init",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Generate a Terraform execution plan. Return only the command.",
+      "expected": "terraform plan",
+      "baseline": "terraform plan",
+      "adapted": "terraform plan",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Check Terraform formatting without modifying files. Return only the command.",
+      "expected": "terraform fmt -check",
+      "baseline": "terraform fmt",
+      "adapted": "terraform fmt",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Terraform state resource addresses. Return only the command.",
+      "expected": "terraform state list",
+      "baseline": "terraform state list",
+      "adapted": "terraform state list",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the current Terraform state. Return only the command.",
+      "expected": "terraform show",
+      "baseline": "terraform show",
+      "adapted": "terraform state show",
+      "baseline_exact_match": true,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display Terraform provider requirements. Return only the command.",
+      "expected": "terraform providers",
+      "baseline": "terraform init",
+      "adapted": "terraform init",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "List Terraform workspaces. Return only the command.",
+      "expected": "terraform workspace list",
+      "baseline": "terraform workspace list",
+      "adapted": "terraform workspace list",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the current Terraform workspace. Return only the command.",
+      "expected": "terraform workspace show",
+      "baseline": "terraform workspace list",
+      "adapted": "terraform workspace list",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display Terraform root module output values. Return only the command.",
+      "expected": "terraform output",
+      "baseline": "terraform show -raw .terraform.tfvars",
+      "adapted": "terraform output",
+      "baseline_exact_match": false,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display network interfaces using ip address show. Return only the command.",
+      "expected": "ip address show",
+      "baseline": "ip a",
+      "adapted": "ip a",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the IPv4 routing table using ip route show. Return only the command.",
+      "expected": "ip route show",
+      "baseline": "ip route show",
+      "adapted": "ip route show",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Display the network neighbor table. Return only the command.",
+      "expected": "ip neighbor show",
+      "baseline": "show ip neighbor",
+      "adapted": "show ip neighbor",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Send four ICMP echo requests to 1.1.1.1. Return only the command.",
+      "expected": "ping -c 4 1.1.1.1",
+      "baseline": "ICMP echo request",
+      "adapted": "ICMP Echo Request",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Query the default DNS record for example.com using dig. Return only the command.",
+      "expected": "dig example.com",
+      "baseline": "dig example.com",
+      "adapted": "dig example.com",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Query the MX record for example.com using dig. Return only the command.",
+      "expected": "dig example.com MX",
+      "baseline": "dig MX example.com",
+      "adapted": "dig MX example.com",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Resolve example.com using nslookup. Return only the command.",
+      "expected": "nslookup example.com",
+      "baseline": "nslookup example.com",
+      "adapted": "nslookup example.com",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Request HTTP headers from https://example.com using curl. Return only the command.",
+      "expected": "curl -I https://example.com",
+      "baseline": "curl -I https://example.com",
+      "adapted": "curl -I https://example.com",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    },
+    {
+      "prompt": "Trace the network path to example.com. Return only the command.",
+      "expected": "traceroute example.com",
+      "baseline": "tracert example.com",
+      "adapted": "tracert example.com",
+      "baseline_exact_match": false,
+      "adapted_exact_match": false
+    },
+    {
+      "prompt": "Display the system hostname. Return only the command.",
+      "expected": "hostname",
+      "baseline": "hostname",
+      "adapted": "hostname",
+      "baseline_exact_match": true,
+      "adapted_exact_match": true
+    }
+  ]
+}

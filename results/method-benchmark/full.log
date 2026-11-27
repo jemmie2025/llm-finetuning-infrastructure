@@ -1,0 +1,145 @@
+{'loss': 4.7068, 'grad_norm': nan, 'learning_rate': 2e-05, 'num_tokens': 175.0, 'mean_token_accuracy': 0.4914112091064453, 'epoch': 0.05}
+{'loss': 5.1209, 'grad_norm': inf, 'learning_rate': 2e-05, 'num_tokens': 335.0, 'mean_token_accuracy': 0.48830436915159225, 'epoch': 0.1}
+{'loss': 4.8533, 'grad_norm': inf, 'learning_rate': 2e-05, 'num_tokens': 503.0, 'mean_token_accuracy': 0.4839092195034027, 'epoch': 0.15}
+{'loss': 4.7725, 'grad_norm': inf, 'learning_rate': 2e-05, 'num_tokens': 677.0, 'mean_token_accuracy': 0.4825514927506447, 'epoch': 0.2}
+{'loss': 4.8435, 'grad_norm': 267.8797607421875, 'learning_rate': 2e-05, 'num_tokens': 844.0, 'mean_token_accuracy': 0.5019995346665382, 'epoch': 0.25}
+{'loss': 2.5183, 'grad_norm': 136.06556701660156, 'learning_rate': 1.9e-05, 'num_tokens': 1024.0, 'mean_token_accuracy': 0.6262192130088806, 'epoch': 0.3}
+{'loss': 1.1103, 'grad_norm': 86.0550308227539, 'learning_rate': 1.8e-05, 'num_tokens': 1197.0, 'mean_token_accuracy': 0.7754885703325272, 'epoch': 0.35}
+{'loss': 0.6465, 'grad_norm': 64.68572235107422, 'learning_rate': 1.7e-05, 'num_tokens': 1369.0, 'mean_token_accuracy': 0.8518263697624207, 'epoch': 0.4}
+{'loss': 0.434, 'grad_norm': 24.17496109008789, 'learning_rate': 1.6000000000000003e-05, 'num_tokens': 1542.0, 'mean_token_accuracy': 0.8874062895774841, 'epoch': 0.45}
+{'loss': 0.3014, 'grad_norm': 51.88147735595703, 'learning_rate': 1.5000000000000002e-05, 'num_tokens': 1710.0, 'mean_token_accuracy': 0.9145833253860474, 'epoch': 0.5}
+{'loss': 0.228, 'grad_norm': 28.417985916137695, 'learning_rate': 1.4e-05, 'num_tokens': 1879.0, 'mean_token_accuracy': 0.9459016174077988, 'epoch': 0.55}
+{'loss': 0.2948, 'grad_norm': 25.688261032104492, 'learning_rate': 1.3000000000000001e-05, 'num_tokens': 2058.0, 'mean_token_accuracy': 0.9372122436761856, 'epoch': 0.6}
+{'loss': 0.2497, 'grad_norm': 11.83165168762207, 'learning_rate': 1.2e-05, 'num_tokens': 2231.0, 'mean_token_accuracy': 0.9520625621080399, 'epoch': 0.65}
+{'loss': 0.3322, 'grad_norm': 28.779071807861328, 'learning_rate': 1.1000000000000001e-05, 'num_tokens': 2402.0, 'mean_token_accuracy': 0.9220383167266846, 'epoch': 0.7}
+{'loss': 0.2, 'grad_norm': 9.696877479553223, 'learning_rate': 1e-05, 'num_tokens': 2577.0, 'mean_token_accuracy': 0.9414451867341995, 'epoch': 0.75}
+{'loss': 0.2104, 'grad_norm': 12.426976203918457, 'learning_rate': 9e-06, 'num_tokens': 2744.0, 'mean_token_accuracy': 0.9447656869888306, 'epoch': 0.8}
+{'loss': 0.4071, 'grad_norm': 16.46849822998047, 'learning_rate': 8.000000000000001e-06, 'num_tokens': 2922.0, 'mean_token_accuracy': 0.91989666223526, 'epoch': 0.85}
+{'loss': 0.162, 'grad_norm': 9.862977027893066, 'learning_rate': 7e-06, 'num_tokens': 3093.0, 'mean_token_accuracy': 0.9463659226894379, 'epoch': 0.9}
+{'loss': 0.3595, 'grad_norm': 12.854060173034668, 'learning_rate': 6e-06, 'num_tokens': 3262.0, 'mean_token_accuracy': 0.9396980106830597, 'epoch': 0.95}
+{'loss': 0.4346, 'grad_norm': 14.019953727722168, 'learning_rate': 5e-06, 'num_tokens': 3442.0, 'mean_token_accuracy': 0.9260183423757553, 'epoch': 1.0}
+{'train_runtime': 29.5693, 'train_samples_per_second': 2.706, 'train_steps_per_second': 0.676, 'train_loss': 1.6092970497906207, 'epoch': 1.0}
+{
+  "framework": "HF TRL",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "method": "full",
+  "gpu": "Tesla T4",
+  "torch_version": "2.14.1+cu130",
+  "samples": 80,
+  "dataset_sha256": "bcedda7e1081bd29f95bbeae157392988193b85da9a0d31c73c3f921636e03f1",
+  "steps": 20,
+  "learning_rate": 2e-05,
+  "mixed_precision": "fp16",
+  "trainable_parameters": 494032768,
+  "total_parameters": 494032768,
+  "checked_parameter": "model.layers.0.self_attn.q_proj.weight",
+  "weights_updated": true,
+  "training_loss": 1.6092970497906207,
+  "runtime_seconds": 30.03,
+  "peak_allocated_vram_gib": 9.23,
+  "peak_reserved_vram_gib": 10.162,
+  "throughput_samples_per_second": 2.706
+}
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795799191.027746   27859 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795799194.318978   27859 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+
+Generating train split: 0 examples [00:00, ? examples/s]
+Generating train split: 80 examples [00:00, 37846.19 examples/s]
+average_tokens_across_devices is set to True but it is invalid when world size is1. Turn it to False automatically.
+
+Tokenizing train dataset:   0%|          | 0/80 [00:00<?, ? examples/s]
+Tokenizing train dataset: 100%|██████████| 80/80 [00:00<00:00, 1388.63 examples/s]
+
+Truncating train dataset:   0%|          | 0/80 [00:00<?, ? examples/s]
+Truncating train dataset: 100%|██████████| 80/80 [00:00<00:00, 22206.77 examples/s]
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+  5%|▌         | 1/20 [00:03<01:01,  3.21s/it]
+                                              
+
+  5%|▌         | 1/20 [00:03<01:01,  3.21s/it]
+ 10%|█         | 2/20 [00:04<00:33,  1.88s/it]
+                                              
+
+ 10%|█         | 2/20 [00:04<00:33,  1.88s/it]
+ 15%|█▌        | 3/20 [00:05<00:24,  1.44s/it]
+                                              
+
+ 15%|█▌        | 3/20 [00:05<00:24,  1.44s/it]
+ 20%|██        | 4/20 [00:05<00:19,  1.23s/it]
+                                              
+
+ 20%|██        | 4/20 [00:05<00:19,  1.23s/it]
+ 25%|██▌       | 5/20 [00:07<00:17,  1.18s/it]
+                                              
+
+ 25%|██▌       | 5/20 [00:07<00:17,  1.18s/it]
+ 30%|███       | 6/20 [00:11<00:33,  2.42s/it]
+                                              
+
+ 30%|███       | 6/20 [00:12<00:33,  2.42s/it]
+ 35%|███▌      | 7/20 [00:14<00:33,  2.57s/it]
+                                              
+
+ 35%|███▌      | 7/20 [00:14<00:33,  2.57s/it]
+ 40%|████      | 8/20 [00:15<00:25,  2.09s/it]
+                                              
+
+ 40%|████      | 8/20 [00:16<00:25,  2.09s/it]
+ 45%|████▌     | 9/20 [00:16<00:19,  1.78s/it]
+                                              
+
+ 45%|████▌     | 9/20 [00:17<00:19,  1.78s/it]
+ 50%|█████     | 10/20 [00:18<00:15,  1.56s/it]
+                                               
+
+ 50%|█████     | 10/20 [00:18<00:15,  1.56s/it]
+ 55%|█████▌    | 11/20 [00:19<00:12,  1.41s/it]
+                                               
+
+ 55%|█████▌    | 11/20 [00:19<00:12,  1.41s/it]
+ 60%|██████    | 12/20 [00:20<00:10,  1.31s/it]
+                                               
+
+ 60%|██████    | 12/20 [00:20<00:10,  1.31s/it]
+ 65%|██████▌   | 13/20 [00:21<00:08,  1.23s/it]
+                                               
+
+ 65%|██████▌   | 13/20 [00:21<00:08,  1.23s/it]
+ 70%|███████   | 14/20 [00:22<00:07,  1.26s/it]
+                                               
+
+ 70%|███████   | 14/20 [00:22<00:07,  1.26s/it]
+ 75%|███████▌  | 15/20 [00:23<00:06,  1.28s/it]
+                                               
+
+ 75%|███████▌  | 15/20 [00:24<00:06,  1.28s/it]
+ 80%|████████  | 16/20 [00:25<00:05,  1.27s/it]
+                                               
+
+ 80%|████████  | 16/20 [00:25<00:05,  1.27s/it]
+ 85%|████████▌ | 17/20 [00:26<00:03,  1.22s/it]
+                                               
+
+ 85%|████████▌ | 17/20 [00:26<00:03,  1.22s/it]
+ 90%|█████████ | 18/20 [00:27<00:02,  1.18s/it]
+                                               
+
+ 90%|█████████ | 18/20 [00:27<00:02,  1.18s/it]
+ 95%|█████████▌| 19/20 [00:28<00:01,  1.14s/it]
+                                               
+
+ 95%|█████████▌| 19/20 [00:28<00:01,  1.14s/it]
+100%|██████████| 20/20 [00:29<00:00,  1.12s/it]
+                                               
+
+100%|██████████| 20/20 [00:29<00:00,  1.12s/it]
+                                               
+
+100%|██████████| 20/20 [00:29<00:00,  1.12s/it]
+100%|██████████| 20/20 [00:29<00:00,  1.48s/it]

@@ -1,0 +1,22 @@
+{
+  "framework": "HF TRL",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "method": "qlora",
+  "gpu": "Tesla T4",
+  "torch_version": "2.14.1+cu130",
+  "samples": 80,
+  "dataset_sha256": "bcedda7e1081bd29f95bbeae157392988193b85da9a0d31c73c3f921636e03f1",
+  "steps": 20,
+  "learning_rate": 2e-05,
+  "mixed_precision": "fp16",
+  "trainable_parameters": 1081344,
+  "total_parameters": 495114112,
+  "checked_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+  "weights_updated": true,
+  "training_loss": 4.516600918769837,
+  "runtime_seconds": 40.68,
+  "peak_allocated_vram_gib": 1.05,
+  "peak_reserved_vram_gib": 1.152,
+  "throughput_samples_per_second": 1.992
+}

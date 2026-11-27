@@ -1,0 +1,30 @@
+{
+  "framework": "Unsloth + TRL",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "requested_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "method": "lora",
+  "gpu": "Tesla T4",
+  "samples": 80,
+  "dataset_sha256": "bcedda7e1081bd29f95bbeae157392988193b85da9a0d31c73c3f921636e03f1",
+  "steps": 20,
+  "learning_rate": 2e-05,
+  "trainable_parameters": 1081344,
+  "total_parameters": 495114112,
+  "weights_updated": true,
+  "training_loss": 4.473500108718872,
+  "runtime_seconds": 38.54,
+  "peak_allocated_vram_gib": 0.992,
+  "peak_reserved_vram_gib": 1.076,
+  "throughput_samples_per_second": 2.164,
+  "versions": {
+    "unsloth": "2026.11.10",
+    "unsloth-zoo": "2026.11.12",
+    "torch": "2.10.0+cu126",
+    "transformers": "5.17.0",
+    "trl": "1.15.0",
+    "peft": "0.22.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.16.0",
+    "datasets": "4.8.5"
+  }
+}

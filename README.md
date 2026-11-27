@@ -1,81 +1,88 @@
-# LLM Fine-Tuning Infrastructure
+# LLM Fine-Tuning Smoke Tests and QLoRA Cost Modeling
 
-Engineering assessment of LoRA, QLoRA and full fine-tuning,
-covering GPU efficiency, framework selection, FinOps and
-operational risk.
+GPU-based validation of LoRA, QLoRA and full fine-tuning,
+comparative assessment of TRL and Unsloth, and 7B QLoRA
+infrastructure cost estimation.
 
 ## Technology Stack
 
-- Training: PyTorch, Transformers, TRL, PEFT and bitsandbytes.
-- GPU environment: Google Colab (NVIDIA Tesla T4).
-- Development: WSL2 (Ubuntu).
-- Configuration: YAML.
-- Testing and CI: pytest and GitHub Actions.
-
-## Models
-
-| Model | Method | Status |
+| Component | TRL repeat environment | Unsloth environment |
 |---|---|---|
-| Qwen3-1.7B | LoRA | Trained and evaluated |
-| Qwen2.5-7B-Instruct | QLoRA | Configured and cost-modeled |
+| PyTorch | 2.14.1+cu130 | 2.10.0+cu126 |
+| Transformers | 4.52.4 | 5.17.0 |
+| TRL | 0.19.0 | 1.15.0 |
+| PEFT | 0.15.2 | 0.22.0 |
+| bitsandbytes | 0.49.0 | 0.50.2 |
+| Accelerate | 1.7.0 | 1.16.0 |
+| Datasets | 3.6.0 | 4.8.5 |
+| Unsloth | Not used | 2026.11.10 |
+| GPU | Tesla T4 | Tesla T4 |
 
-## Validated Results
+PyTorch was supplied by the respective GPU environments.
+The historical LoRA run did not retain a complete dependency lock.
+
+## GPU Smoke Tests
+
+Qwen2.5-0.5B-Instruct, 80 training samples and 20 steps.
+
+| Method | Runtime | Peak allocated VRAM |
+|---|---:|---:|
+| Full fine-tuning | 30.03 s | 9.230 GiB |
+| LoRA | 27.83 s | 1.040 GiB |
+| QLoRA | 40.68 s | 1.050 GiB |
+| Unsloth LoRA | 38.54 s | 0.992 GiB |
+
+Additional LoRA and 4-bit QLoRA smoke tests were
+completed using Qwen3-1.7B.
+
+These single-run experiments validate training execution
+and resource consumption, not production model quality.
+
+## Model Evaluation
+
+The expanded evaluation used 100 synthetic held-out samples.
 
 | Metric | Result |
 |---|---:|
-| Execution environment | Google Colab |
-| GPU | NVIDIA Tesla T4 |
-| Training steps | 20 |
-| Trainable parameters | 0.1863% |
-| Training runtime | 43.94 s |
-| Peak allocated VRAM | 3.323 GiB |
-| Training throughput | 1.848 samples/s |
-| Strict exact match (10 samples) | 0% to 30% |
-| Adapter reload | Passed |
-| Automated tests | 26 passed |
+| Baseline exact match | 39% |
+| LoRA-adapted exact match | 50% |
+| Improvement | 11 percentage points |
 
-## Cost Analysis
+Evaluation used greedy decoding and strict exact matching.
 
-- 30 modeled QLoRA cost scenarios across five GPUs.
-- 11 monthly cost-saving recommendations.
-- Savings, throughput and runtime assumptions documented.
+## Cost Modeling
 
-## Local Validation
+- 30 estimated 7B QLoRA training cost scenarios across five GPUs.
+- 11 independent infrastructure cost-saving recommendations.
+- Documented throughput, pricing and runtime assumptions.
 
-```bash
-python -m pip install -r requirements-dev.txt
-make check
-sha256sum -c results/SHA256SUMS
-```
+## Security Assessment
 
-## GPU Execution
+The requirements-based audit reported 44 findings across
+five dependencies, representing 37 distinct advisories.
 
-LoRA training and evaluation were performed on Google Colab
-using an NVIDIA Tesla T4 GPU.
+Affected versions, advisory identifiers, severity ratings
+and reported fixes are documented in the technical report.
 
-Reproduction requires a compatible CUDA-enabled PyTorch
-environment.
+## Limitations
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/train.py --config configs/lora.yaml --dataset data/train.jsonl
-python scripts/evaluate.py --adapter outputs/lora --dataset data/eval.jsonl
-```
+- Experiments demonstrate functionality, not convergence.
+- Framework comparisons are limited by differing dependency
+  versions and training optimizations.
+- Unsloth reported two non-finite gradient norms.
+- The synthetic evaluation does not establish generalization.
+- 7B QLoRA costs are estimated, not experimentally measured.
+- Reported security fixes have not been applied.
 
-Checkpoint resume and revised precision selection require
-GPU revalidation.
+## Validation
+
+    python -m pip install -r requirements-dev.txt
+    make check
+    sha256sum -c results/SHA256SUMS
 
 ## Documentation
 
 - [Technical report](docs/report.md)
-- [LoRA configuration](configs/lora.yaml)
-- [QLoRA configuration](configs/qlora.yaml)
-- [Execution evidence](results/)
-
-## Limitations
-
-LoRA training and evaluation were GPU-validated.
-QLoRA costs are modeled. Full fine-tuning, distributed
-training and production recovery remain untested.
-
-Known dependency vulnerabilities restrict production adoption.
+- [Training configurations](configs/)
+- [Experiment source](experiment-source/)
+- [Experimental results](results/)

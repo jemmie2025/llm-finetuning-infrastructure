@@ -1,0 +1,137 @@
+{'loss': 4.708, 'grad_norm': nan, 'learning_rate': 2e-05, 'num_tokens': 175.0, 'mean_token_accuracy': 0.4914112091064453, 'epoch': 0.05}
+{'loss': 5.1233, 'grad_norm': nan, 'learning_rate': 2e-05, 'num_tokens': 335.0, 'mean_token_accuracy': 0.48830436915159225, 'epoch': 0.1}
+{'loss': 4.8558, 'grad_norm': 15.991006851196289, 'learning_rate': 2e-05, 'num_tokens': 503.0, 'mean_token_accuracy': 0.4839092195034027, 'epoch': 0.15}
+{'loss': 4.7166, 'grad_norm': 14.971494674682617, 'learning_rate': 1.9e-05, 'num_tokens': 677.0, 'mean_token_accuracy': 0.4825514927506447, 'epoch': 0.2}
+{'loss': 4.7073, 'grad_norm': 15.391742706298828, 'learning_rate': 1.8e-05, 'num_tokens': 844.0, 'mean_token_accuracy': 0.5019995346665382, 'epoch': 0.25}
+{'loss': 4.6895, 'grad_norm': 16.0148868560791, 'learning_rate': 1.7e-05, 'num_tokens': 1024.0, 'mean_token_accuracy': 0.47279418259859085, 'epoch': 0.3}
+{'loss': 4.4261, 'grad_norm': 15.79987907409668, 'learning_rate': 1.6000000000000003e-05, 'num_tokens': 1197.0, 'mean_token_accuracy': 0.48470279574394226, 'epoch': 0.35}
+{'loss': 4.363, 'grad_norm': nan, 'learning_rate': 1.5000000000000002e-05, 'num_tokens': 1369.0, 'mean_token_accuracy': 0.4700494408607483, 'epoch': 0.4}
+{'loss': 4.3189, 'grad_norm': 15.804207801818848, 'learning_rate': 1.5000000000000002e-05, 'num_tokens': 1542.0, 'mean_token_accuracy': 0.49126940220594406, 'epoch': 0.45}
+{'loss': 4.2873, 'grad_norm': 16.224027633666992, 'learning_rate': 1.4e-05, 'num_tokens': 1710.0, 'mean_token_accuracy': 0.4937500059604645, 'epoch': 0.5}
+{'loss': 4.2147, 'grad_norm': 15.751791000366211, 'learning_rate': 1.3000000000000001e-05, 'num_tokens': 1879.0, 'mean_token_accuracy': 0.5092019885778427, 'epoch': 0.55}
+{'loss': 4.1449, 'grad_norm': 14.284411430358887, 'learning_rate': 1.2e-05, 'num_tokens': 2058.0, 'mean_token_accuracy': 0.49154040217399597, 'epoch': 0.6}
+{'loss': 3.9735, 'grad_norm': 13.796252250671387, 'learning_rate': 1.1000000000000001e-05, 'num_tokens': 2231.0, 'mean_token_accuracy': 0.5022003650665283, 'epoch': 0.65}
+{'loss': 4.0635, 'grad_norm': 12.8129301071167, 'learning_rate': 1e-05, 'num_tokens': 2402.0, 'mean_token_accuracy': 0.5030487850308418, 'epoch': 0.7}
+{'loss': 3.9749, 'grad_norm': 10.910443305969238, 'learning_rate': 9e-06, 'num_tokens': 2577.0, 'mean_token_accuracy': 0.49723146110773087, 'epoch': 0.75}
+{'loss': 4.0447, 'grad_norm': 10.36963176727295, 'learning_rate': 8.000000000000001e-06, 'num_tokens': 2744.0, 'mean_token_accuracy': 0.5155807584524155, 'epoch': 0.8}
+{'loss': 4.0094, 'grad_norm': 9.108773231506348, 'learning_rate': 7e-06, 'num_tokens': 2922.0, 'mean_token_accuracy': 0.5122739151120186, 'epoch': 0.85}
+{'loss': 4.1025, 'grad_norm': 11.321608543395996, 'learning_rate': 6e-06, 'num_tokens': 3093.0, 'mean_token_accuracy': 0.49659566581249237, 'epoch': 0.9}
+{'loss': 4.1471, 'grad_norm': 10.140900611877441, 'learning_rate': 5e-06, 'num_tokens': 3262.0, 'mean_token_accuracy': 0.5091923400759697, 'epoch': 0.95}
+{'loss': 4.084, 'grad_norm': 9.182324409484863, 'learning_rate': 4.000000000000001e-06, 'num_tokens': 3442.0, 'mean_token_accuracy': 0.5178479179739952, 'epoch': 1.0}
+{'train_runtime': 27.178, 'train_samples_per_second': 2.944, 'train_steps_per_second': 0.736, 'train_loss': 4.347755408287048, 'epoch': 1.0}
+{
+  "framework": "HF TRL",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "method": "lora",
+  "gpu": "Tesla T4",
+  "torch_version": "2.14.1+cu130",
+  "samples": 80,
+  "dataset_sha256": "bcedda7e1081bd29f95bbeae157392988193b85da9a0d31c73c3f921636e03f1",
+  "steps": 20,
+  "learning_rate": 2e-05,
+  "mixed_precision": "fp16",
+  "trainable_parameters": 1081344,
+  "total_parameters": 495114112,
+  "checked_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+  "weights_updated": true,
+  "training_loss": 4.347755408287048,
+  "runtime_seconds": 27.83,
+  "peak_allocated_vram_gib": 1.04,
+  "peak_reserved_vram_gib": 1.209,
+  "throughput_samples_per_second": 2.944
+}
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795799252.993383   28177 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1795799255.376899   28177 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+average_tokens_across_devices is set to True but it is invalid when world size is1. Turn it to False automatically.
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+  5%|▌         | 1/20 [00:03<01:02,  3.31s/it]
+                                              
+
+  5%|▌         | 1/20 [00:03<01:02,  3.31s/it]
+ 10%|█         | 2/20 [00:04<00:37,  2.07s/it]
+                                              
+
+ 10%|█         | 2/20 [00:04<00:37,  2.07s/it]
+ 15%|█▌        | 3/20 [00:05<00:28,  1.68s/it]
+                                              
+
+ 15%|█▌        | 3/20 [00:05<00:28,  1.68s/it]
+ 20%|██        | 4/20 [00:06<00:23,  1.48s/it]
+                                              
+
+ 20%|██        | 4/20 [00:06<00:23,  1.48s/it]
+ 25%|██▌       | 5/20 [00:08<00:20,  1.37s/it]
+                                              
+
+ 25%|██▌       | 5/20 [00:08<00:20,  1.37s/it]
+ 30%|███       | 6/20 [00:09<00:18,  1.29s/it]
+                                              
+
+ 30%|███       | 6/20 [00:09<00:18,  1.29s/it]
+ 35%|███▌      | 7/20 [00:10<00:16,  1.25s/it]
+                                              
+
+ 35%|███▌      | 7/20 [00:10<00:16,  1.25s/it]
+ 40%|████      | 8/20 [00:11<00:16,  1.34s/it]
+                                              
+
+ 40%|████      | 8/20 [00:11<00:16,  1.34s/it]
+ 45%|████▌     | 9/20 [00:13<00:15,  1.41s/it]
+                                              
+
+ 45%|████▌     | 9/20 [00:13<00:15,  1.41s/it]
+ 50%|█████     | 10/20 [00:14<00:13,  1.33s/it]
+                                               
+
+ 50%|█████     | 10/20 [00:14<00:13,  1.33s/it]
+ 55%|█████▌    | 11/20 [00:15<00:11,  1.28s/it]
+                                               
+
+ 55%|█████▌    | 11/20 [00:15<00:11,  1.28s/it]
+ 60%|██████    | 12/20 [00:16<00:10,  1.25s/it]
+                                               
+
+ 60%|██████    | 12/20 [00:16<00:10,  1.25s/it]
+ 65%|██████▌   | 13/20 [00:18<00:08,  1.22s/it]
+                                               
+
+ 65%|██████▌   | 13/20 [00:18<00:08,  1.22s/it]
+ 70%|███████   | 14/20 [00:19<00:07,  1.21s/it]
+                                               
+
+ 70%|███████   | 14/20 [00:19<00:07,  1.21s/it]
+ 75%|███████▌  | 15/20 [00:20<00:05,  1.19s/it]
+                                               
+
+ 75%|███████▌  | 15/20 [00:20<00:05,  1.19s/it]
+ 80%|████████  | 16/20 [00:21<00:04,  1.20s/it]
+                                               
+
+ 80%|████████  | 16/20 [00:21<00:04,  1.20s/it]
+ 85%|████████▌ | 17/20 [00:22<00:03,  1.20s/it]
+                                               
+
+ 85%|████████▌ | 17/20 [00:22<00:03,  1.20s/it]
+ 90%|█████████ | 18/20 [00:24<00:02,  1.28s/it]
+                                               
+
+ 90%|█████████ | 18/20 [00:24<00:02,  1.28s/it]
+ 95%|█████████▌| 19/20 [00:25<00:01,  1.36s/it]
+                                               
+
+ 95%|█████████▌| 19/20 [00:25<00:01,  1.36s/it]
+100%|██████████| 20/20 [00:27<00:00,  1.34s/it]
+                                               
+
+100%|██████████| 20/20 [00:27<00:00,  1.34s/it]
+                                               
+
+100%|██████████| 20/20 [00:27<00:00,  1.34s/it]
+100%|██████████| 20/20 [00:27<00:00,  1.36s/it]
