@@ -40,7 +40,7 @@ and resource consumption, not production model quality.
 
 ## Model Evaluation
 
-The expanded evaluation used 100 synthetic held-out samples.
+The Qwen3-1.7B LoRA evaluation used 100 synthetic held-out samples.
 
 | Metric | Result |
 |---|---:|
@@ -61,8 +61,9 @@ Evaluation used greedy decoding and strict exact matching.
 The requirements-based audit reported 44 findings across
 five dependencies, representing 37 distinct advisories.
 
-Affected versions, advisory identifiers, severity ratings
-and reported fixes are documented in the technical report.
+Advisory identifiers, severity ratings, reported fixes and
+verification limitations are documented in the technical report.
+The separate Unsloth environment was not audited.
 
 ## Limitations
 
