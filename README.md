@@ -58,12 +58,14 @@ Evaluation used greedy decoding and strict exact matching.
 
 ## Security Assessment
 
-The requirements-based audit reported 44 findings across
-five dependencies, representing 37 distinct advisories.
+- TRL dependency audit: 44 findings across five packages,
+  representing 37 distinct advisories.
+- Unsloth environment (Google Colab): seven findings across
+  three packages, representing five distinct advisories.
+- PyTorch and Torchvision were excluded from the Unsloth audit.
 
-Advisory identifiers, severity ratings, reported fixes and
-verification limitations are documented in the technical report.
-The separate Unsloth environment was not audited.
+Advisory identifiers, severity ratings and reported fixes
+are documented in the technical report.
 
 ## Limitations
 

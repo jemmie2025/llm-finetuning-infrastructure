@@ -166,6 +166,29 @@ package, version and CVE identified 37 distinct advisories.
 | transformers | 4.52.4 | [CVE-2026-80047](https://nvd.nist.gov/vuln/detail/CVE-2026-80047) | [GHSA-x9r9-c232-4q39](https://github.com/advisories/GHSA-x9r9-c232-4q39) | High (7.8) | No fix listed |
 | transformers | 4.52.4 | [CVE-2026-9856](https://nvd.nist.gov/vuln/detail/CVE-2026-9856) | [GHSA-xrqw-3rrv-vx5w](https://github.com/advisories/GHSA-xrqw-3rrv-vx5w) | High (7.1) | 5.10.0 |
 
+### Unsloth Dependency Audit (Google Colab)
+
+Audit date: 2026-11-28.
+
+Seven findings across three packages were identified,
+representing five distinct advisories.
+
+| Package | Version | CVE | GHSA | Severity (CVSS) | Reported fix |
+|---|---|---|---|---|---|
+| datasets | 4.8.5 | CVE-2026-66007 | [GHSA-379c-qx7v-6h59](https://github.com/advisories/GHSA-379c-qx7v-6h59) | Medium (6.9, v4) | 5.0.1 |
+| fsspec | 2026.2.0 | CVE-2026-104851 | [GHSA-27vj-qcqg-25rc](https://github.com/advisories/GHSA-27vj-qcqg-25rc) | High (8.8, v3) | 2026.6.0 |
+| setuptools | 78.1.0 | CVE-2025-47273 | [GHSA-5rjg-fvgr-3xxf](https://github.com/advisories/GHSA-5rjg-fvgr-3xxf) | High (7.7, v4) | 78.1.1 |
+| setuptools | 78.1.0 | CVE-2026-59890 | [GHSA-h35f-9h28-mq5c](https://github.com/advisories/GHSA-h35f-9h28-mq5c) | Medium (6.1, v3) | 83.0.0 |
+| setuptools | 78.1.0 | Not listed | [GHSA-xmj3-9gf7-h52w](https://github.com/advisories/GHSA-xmj3-9gf7-h52w) | Low (1.0, v4) | 84.1.0 |
+
+Advisory details were retrieved from the GitHub Advisory API.
+
+PyTorch 2.10.0+cu126 and Torchvision 0.25.0+cu126
+were excluded because their CUDA-specific versions
+could not be checked through PyPI.
+
+No security fixes were applied.
+
 ### Remediation Recommendations
 
 Prioritize high-severity findings, particularly those
@@ -198,9 +221,9 @@ not confirmed exploitability in this workload.
 No findings were reported for the scanned PEFT 0.15.2
 and bitsandbytes 0.49.0 versions.
 
-The audit covers resolved package versions from the project
-requirements. It does not establish complete runtime security
-or cover the separate Unsloth environment.
+Security audits covered the TRL project requirements and
+recorded Unsloth dependencies (Google Colab).
+PyTorch and Torchvision were excluded from the Unsloth audit.
 
 ### Advisory Sources
 
