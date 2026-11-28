@@ -128,8 +128,8 @@ package, version and CVE identified 37 distinct advisories.
 
 | Package | Version | CVE | GHSA | Severity (CVSS) | Reported fixes |
 |---|---|---|---|---|---|
-| accelerate | 1.7.0 | [CVE-2026-69112](https://nvd.nist.gov/vuln/detail/CVE-2026-69112) | [GHSA-4j2p-28q2-5m79](https://github.com/advisories/GHSA-4j2p-28q2-5m79) | Medium (6.9) | No fix listed |
-| datasets | 3.6.0 | [CVE-2026-66007](https://nvd.nist.gov/vuln/detail/CVE-2026-66007) | [GHSA-379c-qx7v-6h59](https://github.com/advisories/GHSA-379c-qx7v-6h59) | Medium (6.9) | 5.0.1 |
+| accelerate | 1.7.0 | [CVE-2026-69112](https://nvd.nist.gov/vuln/detail/CVE-2026-69112) | [GHSA-4j2p-28q2-5m79](https://github.com/advisories/GHSA-4j2p-28q2-5m79) | Medium (6.9, v4.0) | No fix listed |
+| datasets | 3.6.0 | [CVE-2026-66007](https://nvd.nist.gov/vuln/detail/CVE-2026-66007) | [GHSA-379c-qx7v-6h59](https://github.com/advisories/GHSA-379c-qx7v-6h59) | Medium (6.9, v4.0) | 5.0.1 |
 | filelock | 4.1.0 | [CVE-2026-112906](https://nvd.nist.gov/vuln/detail/CVE-2026-112906) | [GHSA-2g95-wg33-c5x2](https://github.com/advisories/GHSA-2g95-wg33-c5x2) | Medium (4.7) | 4.2.1 |
 | filelock | 4.1.0 | [CVE-2026-112907](https://nvd.nist.gov/vuln/detail/CVE-2026-112907) | [GHSA-567q-5qvw-pf92](https://github.com/advisories/GHSA-567q-5qvw-pf92) | Low (2.5) | 4.2.1 |
 | filelock | 4.1.0 | [CVE-2026-112908](https://nvd.nist.gov/vuln/detail/CVE-2026-112908) | [GHSA-6627-m3xw-93mp](https://github.com/advisories/GHSA-6627-m3xw-93mp) | Medium (5.3) | 4.2.1 |
@@ -148,14 +148,14 @@ package, version and CVE identified 37 distinct advisories.
 | filelock | 4.1.0 | [CVE-2026-112940](https://nvd.nist.gov/vuln/detail/CVE-2026-112940) | [GHSA-v4x8-3wr5-3wq8](https://github.com/advisories/GHSA-v4x8-3wr5-3wq8) | High (7.1) | 4.2.1 |
 | filelock | 4.1.0 | [CVE-2026-112941](https://nvd.nist.gov/vuln/detail/CVE-2026-112941) | [GHSA-wfhq-q4j2-c37m](https://github.com/advisories/GHSA-wfhq-q4j2-c37m) | Low (3.3) | 4.2.1 |
 | fsspec | 2025.3.0 | [CVE-2026-104851](https://nvd.nist.gov/vuln/detail/CVE-2026-104851) | [GHSA-27vj-qcqg-25rc](https://github.com/advisories/GHSA-27vj-qcqg-25rc) | High (8.8) | 2026.6.0 |
-| transformers | 4.52.4 | [CVE-2025-14920](https://nvd.nist.gov/vuln/detail/CVE-2025-14920) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14921](https://nvd.nist.gov/vuln/detail/CVE-2025-14921) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14924](https://nvd.nist.gov/vuln/detail/CVE-2025-14924) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14926](https://nvd.nist.gov/vuln/detail/CVE-2025-14926) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14927](https://nvd.nist.gov/vuln/detail/CVE-2025-14927) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14928](https://nvd.nist.gov/vuln/detail/CVE-2025-14928) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14929](https://nvd.nist.gov/vuln/detail/CVE-2025-14929) | Not listed | High (7.8) | No fix listed |
-| transformers | 4.52.4 | [CVE-2025-14930](https://nvd.nist.gov/vuln/detail/CVE-2025-14930) | Not listed | High (7.8) | No fix listed |
+| transformers | 4.52.4 | [CVE-2025-14920](https://nvd.nist.gov/vuln/detail/CVE-2025-14920) | [GHSA-7hhx-w23w-fg5v](https://github.com/advisories/GHSA-7hhx-w23w-fg5v) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14921](https://nvd.nist.gov/vuln/detail/CVE-2025-14921) | [GHSA-hv5j-58mm-f6v9](https://github.com/advisories/GHSA-hv5j-58mm-f6v9) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14924](https://nvd.nist.gov/vuln/detail/CVE-2025-14924) | [GHSA-mc28-fv57-23xp](https://github.com/advisories/GHSA-mc28-fv57-23xp) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14926](https://nvd.nist.gov/vuln/detail/CVE-2025-14926) | [GHSA-7pvq-9454-7q44](https://github.com/advisories/GHSA-7pvq-9454-7q44) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14927](https://nvd.nist.gov/vuln/detail/CVE-2025-14927) | [GHSA-jpvf-f2r6-62cq](https://github.com/advisories/GHSA-jpvf-f2r6-62cq) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14928](https://nvd.nist.gov/vuln/detail/CVE-2025-14928) | [GHSA-c822-gwgj-vjgr](https://github.com/advisories/GHSA-c822-gwgj-vjgr) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14929](https://nvd.nist.gov/vuln/detail/CVE-2025-14929) | [GHSA-8jfx-5878-hv4v](https://github.com/advisories/GHSA-8jfx-5878-hv4v) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
+| transformers | 4.52.4 | [CVE-2025-14930](https://nvd.nist.gov/vuln/detail/CVE-2025-14930) | [GHSA-9qm5-hqg9-j2fx](https://github.com/advisories/GHSA-9qm5-hqg9-j2fx) (unreviewed) | High (7.8, v3.0) | Upstream fix not verified |
 | transformers | 4.52.4 | [CVE-2025-5197](https://nvd.nist.gov/vuln/detail/CVE-2025-5197) | [GHSA-9356-575x-2w9m](https://github.com/advisories/GHSA-9356-575x-2w9m) | Medium (5.3) | 4.53.0 |
 | transformers | 4.52.4 | [CVE-2025-6051](https://nvd.nist.gov/vuln/detail/CVE-2025-6051) | [GHSA-rcv9-qm8p-9p6j](https://github.com/advisories/GHSA-rcv9-qm8p-9p6j) | Medium (5.3) | 4.53.0 |
 | transformers | 4.52.4 | [CVE-2025-6638](https://nvd.nist.gov/vuln/detail/CVE-2025-6638) | [GHSA-59p9-h35m-wg4g](https://github.com/advisories/GHSA-59p9-h35m-wg4g) | Medium (5.3) | 4.53.0 |
@@ -178,9 +178,18 @@ Reported fixes are recommendations, not applied remediation.
 
 ### Assessment Scope
 
-Severity ratings use the GitHub Advisory Database,
-published security bulletins and advisory descriptions
-included in the audit. CVSS versions may differ by advisory.
+All 37 advisory identifiers and severity scores were
+cross-checked against published sources on 2026-11-28.
+
+Twenty-nine advisories were verified through the GitHub
+Advisory API, including affected version ranges and
+reported fix availability.
+
+The remaining eight GitHub advisories are unreviewed.
+Their CVSS v3.0 scores were confirmed against IBM's
+published security bulletin. Exact applicability to the
+scanned version and upstream fixed releases were not
+independently established for these eight findings.
 
 CVE-2026-1839 has additional PyTorch version prerequisites.
 Scanner findings establish potential dependency exposure,
