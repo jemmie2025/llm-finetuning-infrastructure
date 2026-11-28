@@ -69,13 +69,12 @@ are documented in the technical report.
 
 ## Limitations
 
-- Experiments demonstrate functionality, not convergence.
-- Framework comparisons are limited by differing dependency
-  versions and training optimizations.
-- Unsloth reported two non-finite gradient norms.
-- The synthetic evaluation does not establish generalization.
-- 7B QLoRA costs are estimated, not experimentally measured.
-- Reported security fixes have not been applied.
+- Training runs validate execution, not model convergence.
+- Framework comparisons are constrained by differences in dependency versions and training optimizations.
+- Two non-finite gradient norms were observed during Unsloth training.
+- Evaluation was limited to synthetic held-out samples.
+- 7B QLoRA training costs are modeled estimates rather than measured expenses.
+- Identified security vulnerabilities have not been remediated.
 
 ## Validation
 
